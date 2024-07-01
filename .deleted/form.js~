@@ -1,0 +1,128 @@
+// APW
+// Hooks
+// Control de formularios
+
+// IMPORTANTE: En esta versión del Hook se presupone que las subconsultas se
+// relacionan siempre utilizando el campo 'id' y no se incluyen otros campos.
+
+// NOTA: Me gustaría incluir en este hook los controladores de evento que por ahora
+// estoy poniendo en lso formularios. Esto implicaría detectar el nombre de la colección
+// para personalizar los llamados.
+
+import { useState, useEffect } from 'react';
+import { useParams, useHistory } from 'react-router-dom';
+import { jsonToGraphQLQuery } from 'json-to-graphql-query';
+
+// import gql from 'graphql-tag';
+
+import useQuery from './query';
+import useMutation from './mutation';
+
+import { queryDataStructure, objectMerge, objectUpdate } from '../utils.js';
+
+// Definición del hook
+const useForm = (collection, structure) => {
+
+  const params = useParams();
+  // const history = useHistory();
+
+  // Estado
+  // const [id, setId] = useState(params.id);
+  const [values, setValues] = useState(structure); // Estructura de datos asociada al formulario
+
+  // // Obtener el nombre de la página (que es igual al nombre o alias de la consulta)
+  // const section = typeof query.definitions[0].selectionSet.selections[0].alias === 'undefined' ? query.definitions[0].selectionSet.selections[0].name.value : query.definitions[0].selectionSet.selections[0].alias.value;
+
+  // Obtener los metadatos de la consulta
+  // const collection = query.definitions[0].selectionSet.selections[0].alias.value;
+
+  // Crear una consulta a partir de la estructura de datos recibida como parámetro
+  const readQuery = jsonToGraphQLQuery(structure);
+
+  // Crear las mutaciones para gestionar el formulario
+  const createQuery = gql`mutation ($data: create_${collection}_input = {}) {
+    create_${collection}_item (data: $data)  {
+      id
+    }
+  }`;
+
+  const updateQuery = gql`mutation ($data: update_${collection}_input = {}, $id: ID = "") {
+    update_${collection}_item(data: $data, id: $id) {
+      id
+    }
+  }`;
+
+  const removeQuery = gql`mutation ($id: ID = "") {
+    delete_${collection}_item(id: $id) {
+      id
+    }
+  }`;
+
+  // Mutaciones
+  const create = useMutation(createQuery);
+  const update = useMutation(updateQuery);
+  const remove = useMutation(removeQuery); // La palabra 'delete' está reservada por el lenguaje de programación (Javascript)
+
+  // Consulta de datos
+  const [ data ] = useQuery(readQuery, { id: params.id === 'nuevo' ? '-1' : params.id });  // Forzar una respuesta NULA cuando se quiera agregar un nuevo registro.
+
+  // Si se reciben datos, agregarlos al estado
+  useEffect(() => {
+
+    // Agregar los datos obtenidos de la consulta al estado
+    if (data) setValues(objectMerge(values, data));
+
+  }, [data]); // eslint-disable-line
+
+  // // Editar el registro actual
+  // const handleEdit = () => {
+  //
+  //   setEnabled(false);
+  //
+  // }
+  //
+  // // Borrar el registro actual
+  // const handleDelete = () => {
+  //
+  //   if (window.confirm('¿Borrar el registro seleccionado?') === true) {
+  //     remove({ id: id }).then(() => history.push(`/${section}`)).catch(e => console.log(e));
+  //   };
+  //
+  // }
+  //
+  // // Aceptar la creación o actualización de un registro
+  // const handleAccept = () => {
+  //
+  //   if (id === 'nuevo') {
+  //     create({ data: values }).then((response) => { setId(Object.values(response)[0].id); setDisabled(true); }).catch(e => console.log(e));
+  //   } else {
+  //     update({ data: values, id: id }).then(() => setDisabled(true)).catch(e => console.log(e));
+  //   }
+  //
+  // }
+  //
+  // // Cancelar la creación o actualización de un registro
+  // const handleCancel = () => {
+  //
+  //   if (id === 'nuevo') history.push(`/${section}`);
+  //   else {
+  //     setValues(objectMerge(values, data));
+  //     setDisabled(true); // No basta deshabilitar el formulario, también es necesario restablecer los valores originales.
+  //   }
+  // }
+
+  // Actualizar la estructura de datos (cuando cambien los datos del formulario)
+  const handleChange = (e) => {
+
+    const name = e.target.name;
+    const value = e.target.type === 'checkbox' ? (e.target.checked ? 1 : 0) : e.target.value;
+
+    setValues(objectUpdate(values, name, value));
+
+  }
+
+  return { values, formLink: { disabled: !enabled, onChange: handleChange }, create, update, remove };
+
+}
+
+export default useForm;

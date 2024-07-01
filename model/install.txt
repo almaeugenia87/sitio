@@ -1,0 +1,14 @@
+Cómo instalar Structurizr lite
+--
+
+1. Descargar el archivo WAR de Structurizr lite de
+
+  https://static.structurizr.com/download/structurizr-lite-3045.war
+
+2. Copiar el archivo en
+
+2. Instalar Graphviz
+
+  sudo apt install graphviz
+
+2.

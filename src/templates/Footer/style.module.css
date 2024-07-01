@@ -1,0 +1,63 @@
+/*
+  SD
+  Componentes
+  Footer (Pie de página) - Estilos
+  José Esteva <josesteva@soft4pilot.net>
+  México 2022
+*/
+
+.footer {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  gap: 4px;
+
+}
+
+/* Ajuste con marca */
+.brand-true {
+  padding-bottom: 8px;
+}
+
+/* Color */
+
+.primary {
+  background: var(--color-primary);
+}
+
+.primary.dark {
+  background: var(--color-primary-dark);
+}
+
+.primary.light {
+  background: var(--color-primary-light);
+}
+
+.secondary {
+  background: var(--color-secondary);
+}
+
+.secondary.dark {
+  background: var(--color-secondary-dark);
+}
+
+.secondary.light {
+  background: var(--color-secondary-light);
+}
+
+.neutral {
+  background: var(--color-neutral);
+}
+
+.neutral.dark {
+  background: var(--color-neutral-dark);
+}
+
+.neutral.light {
+  background: var(--color-neutral-light);
+}
+
+/* [lock-all/] */

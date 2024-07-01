@@ -1,0 +1,135 @@
+/*
+  Soft4pilot
+  Registro de pilotos (Estilos)
+  José Esteva <josesteva@soft4pilot.net>
+*/
+
+/* SOLUCION TEMPORAL */
+@media screen and (max-width: 480px) {
+
+  .dynamic {
+    width: 100%;
+  }
+
+  .dynamic button {
+    width: 100%;
+  }
+
+}
+
+/* .grid {
+
+  display: grid;
+
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1280px;
+
+}
+
+.section {
+
+  border: none;
+
+}
+
+.paragraph {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  gap: 16px;
+}
+
+.image {
+  width: 90%;
+}
+
+@media screen and (min-width: 480px) {
+
+  .section {
+
+    border-width: 0;
+    border-style: solid;
+    border-color: var(--color-secondary-light);
+
+  }
+
+  .section:nth-child(odd) .paragraph {
+    flex-direction: row;
+  }
+
+  .section:nth-child(even) .paragraph {
+    flex-direction: row-reverse;
+  }
+
+  .image {
+    width: 50%;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .section {
+    border-width: 3px;
+  }
+
+  .section:nth-child(odd) .paragraph {
+    flex-direction: column;
+  }
+
+  .section:nth-child(even) .paragraph {
+    flex-direction: column;
+  }
+
+  .image {
+    width: 90%;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+  .section:nth-child(odd) .paragraph {
+    flex-direction: row;
+  }
+
+  .section:nth-child(even) .paragraph {
+    flex-direction: row-reverse;
+  }
+
+  .image {
+    width: 50%;
+  }
+
+}
+
+@media screen and (min-width: 1280px) {
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    padding: 32px;
+  }
+
+  .section:nth-child(odd) .paragraph {
+    flex-direction: column;
+  }
+
+  .section:nth-child(even) .paragraph {
+    flex-direction: column;
+  }
+
+  .image {
+    width: 90%;
+  }
+
+} */

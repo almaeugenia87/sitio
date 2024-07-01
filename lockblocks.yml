@@ -1,0 +1,33 @@
+# APW
+# Actualización de productos creados a partir de la arquitectura
+# José Esteva <josesteva@soft4pilot.net>
+
+# NOTA: Consultar la sintaxis en: https://www.npmjs.com/package/lockblocks#documentation
+
+renameFiles: []
+replaceFiles:
+  - src/templates/Hero
+  - src/templates/Footer
+fillFiles:
+  - src/hooks
+  - src/templates
+deleteFiles: []
+excludePaths:
+  - .deleted
+  - .git
+  - .lockblocks
+  - node_modules
+  - README.md
+updateJson:
+  - path: package.json
+    root:
+      fill: true
+    updateFields:
+      - key: scripts
+        merge: true
+      - key: dependencies
+        merge: true
+      - key: devDependencies
+        merge: true
+updateYaml: []
+log: true

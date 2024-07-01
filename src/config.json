@@ -1,0 +1,46 @@
+{
+  "id": 1,
+  "name": "APW",
+  "slogan": "Arquitectura de los Productos Web",
+  "license": "MIT",
+  "version": "1.4",
+  "email": "buzon@soft4pilot.net",
+  "pages": [
+    {
+      "icon": "home",
+      "label": "Inicio",
+      "module" : "Inicio",
+      "route": "/",
+      "filter": {},
+      "offset": 0,
+      "item": false
+    },{
+      "icon": "file",
+      "label": "Manual",
+      "module" : "Manual",
+      "route": "/",
+      "filter": {},
+      "offset": 0,
+      "item": true
+    },{
+      "icon": "command",
+      "label": "Servicio",
+      "module" : "Pagina",
+      "route": "/pagina",
+      "filter": {},
+      "offset": 0,
+      "item": false
+    },{
+      "icon": "user",
+      "label": "Registro",
+      "module" : "Registro",
+      "route": "/registro",
+      "filter": {},
+      "offset": 0,
+      "item": true,
+      "aside": true
+    }
+  ],
+   "currentPage": {},
+   "currentWidth": 0
+}
