@@ -1,0 +1,10 @@
+/*
+  SD
+  Estilos generales
+  José Esteva <josesteva@soft4pilot.net>
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap');
+
+@import './tokens/style.css';
+@import './default/style.css';
