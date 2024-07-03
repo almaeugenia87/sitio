@@ -6,33 +6,30 @@ import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { gql, useQuery } from '@apollo/client';
 
-// Recursos
-import Icon from '../../assets/icons/command.svg?react';
-
-// Componentes del sistema de diseño
-import {
-  Actions,
-  Box,
-  Button,
-  Command,
-  Heading,
-  Image,
-  Label,
-  Ribbon,
-  Text,
-  Title
-} from '@soft4pilot/sd';
-
-// Contexto de la aplicación
+// Contexto
 // import { Context } from '../../index';
 
 // // Mecanismos
 // import omitDeep from '../../hooks/utils/omitDeep';
 
-// Plantillas
-import Hero from '../../templates/Hero';
+// Recursos
+import Icon from '../../assets/icons/command.svg?react';
 
-// Estilos específicos
+// Contenedores
+import Box  from '../../containers/Box';
+import Text from '../../containers/Text';
+
+// Componentes
+import Button from '../../components/atoms/Button';
+import  Heading from '../../components/atoms/Button';
+import  Image from '../../components/atoms/Image';
+import  Label from '../../components/atoms/Label';
+import  Title from '../../components/atoms/Title';
+import  Ribbon from '../../components/molecules/Ribbon';
+import Hero from '../../components/organisms/Hero';
+import { Actions, Command } from '../../components/organisms/Actions';
+
+// Estilos
 import style from './style.module.css';
 
 // Consulta de datos

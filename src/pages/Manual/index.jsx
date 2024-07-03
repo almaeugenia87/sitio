@@ -6,28 +6,26 @@ import React, { useContext, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { gql, useQuery } from '@apollo/client';
 
-// Recursos
-import Icon from '../../assets/icons/command.svg?react';
-
-// Componentes del sistema de diseño
-import {
-  Actions,
-  Command,
-  Heading,
-  Image,
-  Label,
-  Ribbon,
-  Text,
-  Title
-} from '@soft4pilot/sd';
-
 // Contexto de la aplicación
 // import { Context } from '../../index';
 
 // // Mecanismos
 // import omitDeep from '../../hooks/utils/omitDeep';
 
-// Estilos específicos
+// Recursos
+import Icon from '../../assets/icons/command.svg?react';
+
+// Contenedores
+import Box  from '../../containers/Box';
+import Text from '../../containers/Text';
+
+// Componentes
+import  Heading from '../../components/atoms/Button';
+import  Image from '../../components/atoms/Image';
+import  Title from '../../components/atoms/Title';
+import { Actions, Command } from '../../components/organisms/Actions';
+
+// Estilos
 import style from './style.module.css';
 
 // Consulta de datos

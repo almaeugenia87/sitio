@@ -1,0 +1,61 @@
+/*
+  SD
+  Componentes
+  Text (Texto) - Estilos
+  José Esteva <josesteva@soft4pilot.net>
+
+*/
+
+/* Alineación */
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.right {
+  text-align: right;
+}
+
+/* Tamaño */
+
+.huge {
+  font: var(--font-huge);
+}
+
+.large {
+  font: var(--font-large);
+}
+
+.medium {
+  font: var(--font-medium);
+}
+
+.small {
+  font: var(--font-small);
+}
+
+.tiny {
+  font: var(--font-tiny);
+}
+
+/* Color */
+
+.black {
+  color: var(--color-black);
+}
+
+.neutral {
+  color: var(--color-neutral);
+}
+
+.white {
+  color: var(--color-white);
+}

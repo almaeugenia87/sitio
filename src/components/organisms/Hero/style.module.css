@@ -1,0 +1,18 @@
+/*
+  SD
+  Componentes
+  Hero (Producto) - Estilos
+  José Esteva <josesteva@soft4pilot.net>
+  México 2022
+*/
+
+.hero {
+
+  position: sticky;
+  top: -1px;
+
+  z-index: 25;
+
+}
+
+/* [lock-all/] */

@@ -1,0 +1,113 @@
+/*
+  SD
+  Retículas
+  Flexbox (Caja flexible)
+  José Esteva <josesteva@cic.unam.mx>
+*/
+
+.container {
+
+  display: flex;
+  align-items: center;
+
+  gap: 0;
+
+  border-width: 1px;
+  border-style: none;
+
+  padding: 0;
+
+  height: 100%;
+  width: 100%;
+
+}
+
+/* Dirección */
+
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+/* Distancia */
+
+.gap-tiny {
+  gap: 4px;
+}
+
+.gap-small {
+  gap: 8px;
+}
+
+.gap-medium {
+  gap: 16px;
+}
+
+.gap-large {
+  gap: 32px;
+}
+
+.gap-huge {
+  gap: 64px;
+}
+
+/* Envolver */
+
+.wrap-true {
+  flex-wrap: wrap;
+}
+
+.wrap-false {
+  flex-wrap: nowrap;
+}
+
+/* Justificación */
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+/* Alineación */
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.align-stretch {
+  align-items: stretch;
+}
+
+.align-baseline {
+  align-items: baseline;
+}
