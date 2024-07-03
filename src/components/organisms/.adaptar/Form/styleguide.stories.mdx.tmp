@@ -14,7 +14,7 @@ import Label from '../../atoms/Label';
 import Radio from '../../atoms/Radio';
 import Select from '../../atoms/Select';
 import Textarea from '../../atoms/Textarea';
-import Flexbox from '../../../layout/Flexbox';
+import Flexbox from '../../../containers/Flexbox';
 
 import Form from './index';
 

@@ -18,7 +18,7 @@ jobs:
         scope: '@soft4pilot'
     - run: npm install --legacy-peer-deps && CI= npm run build
       env:
-        S4P_GITHUB_TOKEN: ${{ secrets.S4P_GITHUB_TOKEN }}
+        LPDM_GITHUB_TOKEN: ${{ secrets.LPDM_GITHUB_TOKEN }}
     - uses: easingthemes/ssh-deploy@main
       env:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}

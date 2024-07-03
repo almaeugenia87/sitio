@@ -72,7 +72,7 @@ const Manual = props => {
       <section className={style.section}>
         <Heading color="secondary" space="small" hue="light"><Title size="small">{data.servicio.nombre}</Title></Heading>
         <div className={style.paragraph}>
-          <Image className={style.image} src={`${import.meta.env.S4P_API_URL}${data.servicio.imagen.url}`}/>
+          <Image className={style.image} src={`${import.meta.env.LPDM_API_URL}${data.servicio.imagen.url}`}/>
           <Text align="center">{data.servicio.descripcion}</Text>
         </div>
       </section> }

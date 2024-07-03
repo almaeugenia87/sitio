@@ -25,7 +25,7 @@ import Template from './pages';
 // Configuración del acceso a los datos
 const client = new ApolloClient({
 
-  uri: import.meta.env.S4P_API_URL + '/graphql',
+  uri: import.meta.env.LPDM_API_URL + '/graphql',
   cache: new InMemoryCache()
 
 });

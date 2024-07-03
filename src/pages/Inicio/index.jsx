@@ -21,11 +21,13 @@ import Text from '../../containers/Text';
 
 // Componentes
 import Button from '../../components/atoms/Button';
-import  Heading from '../../components/atoms/Button';
-import  Image from '../../components/atoms/Image';
-import  Label from '../../components/atoms/Label';
-import  Title from '../../components/atoms/Title';
-import  Ribbon from '../../components/molecules/Ribbon';
+import Image from '../../components/atoms/Image';
+import Label from '../../components/atoms/Label';
+import Title from '../../components/atoms/Title';
+
+import Heading from '../../components/molecules/Heading';
+import Ribbon from '../../components/molecules/Ribbon';
+
 import Hero from '../../components/organisms/Hero';
 import { Actions, Command } from '../../components/organisms/Actions';
 
@@ -96,7 +98,7 @@ const Inicio = props => {
               { servicio.id === 2 && <Ribbon color="accent"><Label size="medium" color="white" accent="bold">NUEVO</Label></Ribbon> }
               <Heading color="secondary" space="small" hue="light"><Title size="small">{servicio.attributes.nombre}</Title></Heading>
               <div className={style.paragraph}>
-                { servicio.attributes.imagen && <Image className={style.image} src={`${import.meta.env.S4P_API_URL}${servicio.attributes.imagen.data.attributes.url}`}/> }
+                { servicio.attributes.imagen && <Image className={style.image} src={`${import.meta.env.LPDM_API_URL}${servicio.attributes.imagen.data.attributes.url}`}/> }
                 <Text align="center">{servicio.attributes.descripcion}</Text>
               </div>
             </section>

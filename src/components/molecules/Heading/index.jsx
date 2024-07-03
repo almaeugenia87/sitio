@@ -7,8 +7,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Box from '../../../layout/Box';
-import Flexbox from '../../../layout/Flexbox';
+import Box from '../../../containers/Box';
+import Flexbox from '../../../containers/Flexbox';
 
 // import style from './style.module.css';
 
