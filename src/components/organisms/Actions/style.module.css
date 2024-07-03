@@ -1,0 +1,72 @@
+/*
+  SD
+  Componentes
+  Actions (Acciones) - Estilos
+  José Esteva <josesteva@soft4pilot.net>
+  Código adaptado de: https://www.upbeatcode.com/react/implement-floating-action-button-in-react/
+*/
+
+/* Contenedor */
+
+.actions {
+
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  max-height: 64px; /* Esta regla  se utiliza para mostrar/ocultar los comandos */
+
+  transition: max-height 300ms;
+
+}
+
+/* Estado */
+
+.actions.open-true {
+
+  max-height: max-content;
+
+  transition: max-height 300ms;
+
+}
+
+.actions li:first-child svg {
+
+  transform: rotate(0);
+  transition: transform 400ms;
+
+}
+
+.actions.open-true li:first-child svg {
+
+  transform: rotate(45deg);
+  transition: transform 400ms;
+
+}
+
+.command {
+
+  opacity: 0;
+  z-index: -1;
+  cursor: pointer;
+
+  transform: translateY(100px);
+  transition: transform 300ms, opacity 300ms;
+
+}
+
+.command.open-true {
+
+  opacity: 1;
+
+  transform: translateY(0);
+  transition: transform 300ms, opacity 300ms;
+
+}

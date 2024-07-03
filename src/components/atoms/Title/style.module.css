@@ -1,0 +1,63 @@
+/*
+  SD
+  Componentes
+  Title (Titulo) - Estilos
+  José Esteva <josesteva@soft4pilot.net>
+  
+*/
+
+/* Predeterminado */
+
+.title {
+
+  display: inline;
+
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-bold);
+
+}
+
+/* .title small {
+  color: var(--color-neutral);
+} */
+
+/* Color */
+
+.black {
+  color: var(--color-black);
+}
+
+.neutral {
+  color: var(--color-neutral);
+}
+
+.white {
+  color: var(--color-white);
+}
+
+/* Tamaño (size) */
+
+.huge {
+  font-size: calc(var(--font-size-huge)*1.5);
+  line-height: calc(var(--line-height-huge)*1.5);
+}
+
+.large {
+  font-size: calc(var(--font-size-large)*1.5);
+  line-height: calc(var(--line-height-large)*1.5);
+}
+
+.medium {
+  font-size: calc(var(--font-size-medium)*1.5);
+  line-height: calc(var(--line-height-medium)*1.5);
+}
+
+.small {
+  font-size: calc(var(--font-size-small)*1.5);
+  line-height: calc(var(--line-height-small)*1.5);
+}
+
+.tiny {
+  font-size: calc(var(--font-size-tiny)*1.5);
+  line-height: calc(var(--line-height-tiny)*1.5);
+}

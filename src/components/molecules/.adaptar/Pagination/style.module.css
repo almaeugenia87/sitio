@@ -1,0 +1,48 @@
+/*
+  SD
+  Estilos
+  Pagination (Paginación)
+*/
+
+.pagination {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0px;
+  cursor: pointer;
+
+}
+
+.page {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+
+  width: 32px;
+  height: 32px;
+
+}
+
+.page.selected {
+  border-radius: 16px;
+}
+
+/* Color */
+
+.page.selected.primary {
+  background: var(--color-primary-light);
+}
+
+.page.selected.secondary {
+  background: var(--color-secondary-light);
+}
+
+.page.selected.neutral {
+  background: var(--color-neutral-light);
+}

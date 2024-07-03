@@ -1,0 +1,86 @@
+/*
+  SD
+  Componentes
+  Labe (Etiqueta) - Estilos
+  José Esteva <josesteva@soft4pilot.net>
+
+*/
+
+/* Predeterminado */
+
+.label {
+
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+
+}
+
+/* Color */
+
+.black {
+  color: var(--color-black);
+}
+
+.neutral {
+  color: var(--color-neutral);
+}
+
+.white {
+  color: var(--color-white);
+}
+
+/* Tamaño (size) */
+
+.large {
+  font: var(--font-large);
+  gap: 8px;
+}
+
+.large svg {
+  width: var(--icon-size-medium);
+  height: var(--icon-size-medium);
+}
+
+/* Ajuste necesario */
+.large div {
+  height: var(--icon-size-medium);
+}
+
+.medium {
+  font: var(--font-medium);
+  gap: 6px;
+}
+
+.medium svg {
+  width: var(--icon-size-small);
+  height: var(--icon-size-small);
+}
+
+/* Ajuste necesario */
+.medium div {
+  height: var(--icon-size-small);
+}
+
+.small {
+  font: var(--font-small);
+  gap: 4px;
+}
+
+.small svg {
+  width: var(--icon-size-tiny);
+  height: var(--icon-size-tiny);
+}
+
+/* Ajuste necesario */
+.small div {
+  height: var(--icon-size-tiny);
+}
+
+/* Variantes */
+.bold-true {
+  font-weight: var(--font-weight-bold);
+}

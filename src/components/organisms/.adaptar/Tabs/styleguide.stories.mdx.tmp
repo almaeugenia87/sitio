@@ -1,0 +1,62 @@
+<!--
+  SD
+  Organismos
+  Tabs (Pestañas)
+  Raul Salinas <raul.teo.salinas@cic.unam.mx>
+  José Esteva <josesteva@cic.unam.mx>
+-->
+
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs';
+import { withDesign } from 'storybook-addon-designs';
+
+import Tabs from './index';
+
+<Meta
+  title="Organismos/Tabs"
+  component={Tabs}
+  decorators={[ withDesign ]}
+/>
+
+# Tabs (Pestañas)
+
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur qui ut
+beatae nam molestiae cum doloremque fugit nihil, vitae modi recusandae culpa
+odit facere eum vel reiciendis eius repellat, totam aperiam. Molestiae error
+voluptatibus et neque vel libero, harum nam quibusdam mollitia, sapiente rerum
+iste modi sit deserunt? Officiis, quaerat!
+
+<Canvas>
+  <Story
+    name="Componente"
+    parameters={{ design: { type: 'figma', url: 'https://www.figma.com/file/tyBKC7ndaq3XNOCERB1q8H/Componentes?type=design&node-id=3958%3A1390&mode=design&t=LFTzqaEvB6jAp7Ep-1' }}}
+    argTypes={{
+      value: {
+        name: 'value',
+        type: { name: 'text', required: false },
+        description: 'Texto de la ruta seleccionada.',
+        control: 'text'
+      },
+      onChange: {
+        name: 'onChange',
+        type: { name: 'function', required: false },
+        description: 'Función que se ejecuta al seleccionar una ruta; se envía como parámetro la ruta seleccionada.',
+        control: null
+      }
+    }}
+    args={{
+      value: '/uno',
+      onChange: path => console.log('La ruta cambió a: ' + path)
+    }}
+  >
+    {(args) =>
+      <Tabs {...args}>
+        <Tabs.Item path="/uno">Etiqueta</Tabs.Item>
+        <Tabs.Item path="/dos">Etiqueta</Tabs.Item>
+        <Tabs.Item path="/tres">Etiqueta</Tabs.Item>
+        <Tabs.Item path="/cuatro">Etiqueta</Tabs.Item>
+      </Tabs>
+    }
+  </Story>
+</Canvas>
+
+<ArgsTable story='Componente' />

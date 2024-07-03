@@ -1,0 +1,117 @@
+/*
+  SD
+  Estilos
+  Textarea (Área de texto)
+  José Esteva <josesteva@soft4pilot.net>
+*/
+
+/* General */
+
+.control {
+
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 4px;
+
+  width: 100%;
+  height: 32px;
+
+  color: var(--color-black);
+  background: var(--color-white);
+
+  padding: 4px 8px;
+  font: var(--font-medium);
+
+  min-height: 96px;
+  resize: none; /* Necesario para ocultar la esquina para cambiar el tamaño */
+
+}
+
+.control:disabled {
+  background: var(--color-neutral-light);
+  border-color: var(--color-neutral-dark);
+}
+
+.control:hover {
+  cursor: text;
+}
+
+.control:hover:disabled {
+  cursor: default;
+}
+
+.control::-webkit-scrollbar {
+  width: 16px;
+}
+
+/* Color */
+
+.black {
+  border-color: var(--color-black);
+}
+
+.black::placeholder {
+  color: var(--color-neutral);
+}
+
+.black::-webkit-scrollbar-track {
+  background: var(--color-neutral-light);
+}
+
+.black::-webkit-scrollbar-thumb {
+  background: var(--color-neutral-dark);
+}
+
+.primary {
+  border-color: var(--color-primary);
+}
+
+.primary::placeholder {
+  color: var(--color-primary-light);
+}
+
+.primary::-webkit-scrollbar-track {
+  background: var(--color-primary-light);
+}
+
+.primary::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+}
+
+.secondary {
+  border-color: var(--color-secondary);
+}
+
+.secondary::placeholder {
+  color: var(--color-secondary-light);
+}
+
+.secondary::-webkit-scrollbar-track {
+  background: var(--color-secondary-light);
+}
+
+.secondary::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+}
+
+.neutral {
+  border-color: var(--color-neutral-dark);
+}
+
+.neutral::placeholder {
+  color: var(--color-neutral-light);
+}
+
+.neutral::-webkit-scrollbar-track {
+  background: var(--color-neutral-light);
+}
+
+.neutral::-webkit-scrollbar-thumb {
+  background: var(--color-neutral);
+}
+
+/* Efectos */
+
+.border-false {
+  border-style: none;
+}

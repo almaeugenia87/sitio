@@ -1,0 +1,73 @@
+/*
+  SD
+  Estilos
+  Table (Tabla)
+  José Esteva <josesteva@cic.unam.mx>
+*/
+
+.table {
+
+  border-collapse: collapse;
+  background: var(--color-white);
+
+}
+
+.table th {
+
+  border: none;
+  border-bottom: 2px solid var(--color-black);
+
+  padding: 8px 16px;
+
+  text-align: left;
+  cursor: pointer;
+
+}
+
+.table td {
+
+  border: none;
+  border-bottom: 1px solid var(--color-neutral);
+
+  padding: 8px 16px;
+
+  text-align: left;
+  cursor: pointer;
+
+}
+
+.selector, .action {
+
+  width:1px;
+  white-space: nowrap;
+
+}
+
+.table tbody tr:hover {
+  background: var(--color-neutral-light);
+}
+
+
+
+/* .selector {
+
+  width: 40px;
+
+}
+
+.action {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+} */
+
+/* .tbody tr:hover .actions {
+
+  visibility: visible;
+
+} */

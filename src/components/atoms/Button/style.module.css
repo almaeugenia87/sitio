@@ -1,0 +1,108 @@
+/*
+  SD
+  Componentes
+  Button (Botón) - Estilos
+  José Esteva <josesteva@soft4pilot.net>
+
+*/
+
+/* Predeterminado */
+
+.button {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+
+}
+
+/* Tamaño */
+
+.large {
+
+  border-radius: 32px;
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.25);
+
+}
+
+.medium {
+
+  border-radius: 24px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
+
+}
+
+/* Ajustes para los distintos tipos de botones */
+
+.large.padding-complete {
+
+  padding: 16px 24px 16px 16px;
+
+}
+
+.medium.padding-complete {
+
+  padding: 12px 20px 12px 12px;
+
+}
+
+.large.padding-icon {
+
+  padding: 16px;
+
+}
+
+.medium.padding-icon {
+
+  padding: 12px;
+
+}
+
+.large.padding-text {
+
+  border-radius: 32px;
+  padding: 16px 32px;
+
+}
+
+.medium.padding-text {
+
+  border-radius: 24px;
+  padding: 12px 24px;
+
+}
+
+/* Color */
+
+.primary {
+  background: var(--color-primary);
+}
+
+.secondary {
+  background: var(--color-secondary);
+}
+
+.neutral {
+  background: var(--color-neutral);
+}
+
+.accent {
+  background: var(--color-accent);
+}
+
+/* Estados y eventos */
+
+.button:hover {
+  cursor: pointer;
+}
+
+/* .button:active {
+
+}
+
+.button:disabled {
+
+} */

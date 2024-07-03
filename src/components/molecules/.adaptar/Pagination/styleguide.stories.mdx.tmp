@@ -1,0 +1,60 @@
+<!--
+  SD
+  Documentación
+  Pagination (Paginación)
+-->
+
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs';
+import { withDesign } from 'storybook-addon-designs';
+import { useState } from 'react';
+
+import Label from '../../atoms/Label';
+
+import Pagination from './index';
+
+<Meta
+  title="Moléculas/Pagination"
+  component={Pagination}
+  decorators={[ withDesign ]}
+/>
+
+export const onChange = page => {
+  console.log('Se seleccionó la página: ' + page);
+}
+
+# Pagination (Paginación)
+
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur qui ut
+beatae nam molestiae cum doloremque fugit nihil, vitae modi recusandae culpa
+odit facere eum vel reiciendis eius repellat, totam aperiam. Molestiae error
+voluptatibus et neque vel libero, harum nam quibusdam mollitia, sapiente rerum
+iste modi sit deserunt? Officiis, quaerat!
+
+<Canvas>
+  <Story
+    name="Componente"
+    parameters={{ design: { type: 'figma', url: 'https://www.figma.com/file/tyBKC7ndaq3XNOCERB1q8H/Componentes?node-id=2345%3A1676' }}}
+    argTypes={{
+      color: {
+        name: 'color',
+        type: { name: 'string', required: false },
+        description: 'Color del selector de página',
+        control: 'select',
+        options: ['primary','secondary','neutral']
+      }
+    }}
+    args={{
+      value: 1,
+      count: 10,
+      size: 5,
+      color: 'primary',
+      onChange: page => console.log('Se seleccionó la página: ' + page)
+    }}
+  >
+      { (args) => {
+        return (<Pagination {...args}/>)
+      }}
+  </Story>
+</Canvas>
+
+<ArgsTable story='Componente' />

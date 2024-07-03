@@ -1,0 +1,79 @@
+/*
+  SD
+  Estilos
+  Form (Formulario)
+  José Esteva <josesteva@cic.unam.mx>
+*/
+
+.form {
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+
+  width: 100%;
+  padding: 8px;
+  background: var(--color-white);
+
+}
+
+.field {
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+
+  width: 100%;
+  padding: 8px;
+
+}
+
+/* Tablet (large) */
+
+@container (min-width: 960px) {
+
+  .form {
+    max-width: 85%;
+  }
+
+  .field {
+    flex-direction: row;
+    text-align: right;
+    gap: 32px;
+  }
+
+  .field > *:first-child {
+    flex: 0 0 25%;
+  }
+
+  .field > *:last-child {
+    flex-grow: 0;
+  }
+
+}
+
+/* @container (min-width: 1280px) {
+
+  .form {
+    max-width: 80%;
+  }
+
+}
+
+@container (min-width: 1600px) {
+
+  .form {
+    max-width: 70%;
+  }
+
+}
+
+@container (min-width: 1920px) {
+
+  .form {
+    max-width: 60%;
+  }
+
+} */

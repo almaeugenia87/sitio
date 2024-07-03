@@ -1,0 +1,104 @@
+<!--
+  SD
+  Documentación
+  Table (Tabla)
+  José Esteva <josesteva@cic.unam.mx>
+-->
+
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs';
+import { withDesign } from 'storybook-addon-designs';
+
+import Table from './index';
+
+<Meta
+  title="Organismos/Table"
+  component={Table}
+  decorators={[ withDesign ]}
+/>
+
+export const rows = [
+  { uno: 'Contenido', dos: 'Contenido', tres: 'Contenido', cuatro: 'Contenido' },
+  { uno: 'Contenido', dos: 'Contenido', tres: 'Contenido', cuatro: 'Contenido' },
+  { uno: 'Contenido', dos: 'Contenido', tres: 'Contenido', cuatro: 'Contenido' },
+  { uno: 'Contenido', dos: 'Contenido', tres: 'Contenido', cuatro: 'Contenido' },
+  { uno: 'Contenido', dos: 'Contenido', tres: 'Contenido', cuatro: 'Contenido' },
+  { uno: 'Contenido', dos: 'Contenido', tres: 'Contenido', cuatro: 'Contenido' },
+  { uno: 'Contenido', dos: 'Contenido', tres: 'Contenido', cuatro: 'Contenido' },
+  { uno: 'Contenido', dos: 'Contenido', tres: 'Contenido', cuatro: 'Contenido' }
+];
+
+export const onRowClick = (tr) => {
+  console.log("Se hizo click el renglón: " + tr.dataset.id);
+}
+
+export const toogleSelect = (tr, v) => {
+  console.log("Se " + (v ? "selecciona" : "deselecciona") + " el renglón: " + tr.dataset.id);
+}
+
+export const doAction = (tr) => {
+  console.log("Se elimina el renglón: " + tr.dataset.id);
+}
+
+# Table (Tabla)
+
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur qui ut
+beatae nam molestiae cum doloremque fugit nihil, vitae modi recusandae culpa
+odit facere eum vel reiciendis eius repellat, totam aperiam. Molestiae error
+voluptatibus et neque vel libero, harum nam quibusdam mollitia, sapiente rerum
+iste modi sit deserunt? Officiis, quaerat!
+
+<Canvas>
+  <Story
+    name="Componente"
+    parameters={{ design: { type: 'figma', url: 'https://www.figma.com/file/tyBKC7ndaq3XNOCERB1q8H/Componentes?type=design&node-id=3626%3A4969&mode=design&t=tywE1PcvpvIVuilj-1' }}}
+    argTypes={{
+      selectors: {
+        name: 'selectors',
+        type: { name: 'bool', required: false },
+        description: 'Incluir selectores de registro.',
+        control: 'boolean'
+      },
+      actions: {
+        name: 'actions',
+        type: { name: 'bool', required: false },
+        description: 'Incluir acciones de registro.',
+        control: 'boolean'
+      }
+    }}
+    args={{
+      selectors: false,
+      actions: false,
+      toogleSelect,
+      doAction
+    }}
+  >
+    {(args) =>
+      <Table style={{width:'100%'}}>
+        <Table.Head>
+          <Table.Row>
+            { args.selectors && <Table.Label empty /> }
+            <Table.Label>Uno</Table.Label>
+            <Table.Label>Dos</Table.Label>
+            <Table.Label>Tres</Table.Label>
+            <Table.Label>Cuatro</Table.Label>
+            { args.actions && <Table.Label empty /> }
+          </Table.Row>
+        </Table.Head>
+        <Table.Body>
+          { rows.map((row, i) => (
+            <Table.Row key={i} data-id={i}>
+              { args.selectors && <Table.Selector toogleSelect={toogleSelect} /> }
+              <Table.Data>{row.uno}</Table.Data>
+              <Table.Data>{row.dos}</Table.Data>
+              <Table.Data>{row.tres}</Table.Data>
+              <Table.Data>{row.cuatro}</Table.Data>
+              { args.actions && <Table.Action icon="times" doAction={doAction} /> }
+            </Table.Row>
+          ))}
+        </Table.Body>
+      </Table>
+    }
+  </Story>
+</Canvas>
+
+<ArgsTable story='Componente' />

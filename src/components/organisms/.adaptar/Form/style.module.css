@@ -1,0 +1,56 @@
+/*
+  SD
+  Estilos
+  Form (Formulario)
+  José Esteva <josesteva@cic.unam.mx>
+*/
+
+/* Estilo predeterminado */
+
+.form {
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+
+  width: 100%;
+  padding: 8px;
+  background: var(--color-white);
+
+}
+
+.field {
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+
+  width: 100%;
+  padding: 8px;
+
+}
+
+/* En columnas */
+
+.form.columns .field {
+  flex-direction: row;
+  text-align: right;
+  gap: 32px;
+}
+
+.form.columns .field > *:first-child {
+  flex: 0 0 25%;
+}
+
+.form.columns .field > *:last-child {
+  flex-grow: 0;
+}
+
+/* En línea */
+
+.form.inline {
+  flex-direction: row;
+  align-items: center;
+}
