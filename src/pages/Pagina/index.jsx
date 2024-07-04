@@ -2,31 +2,30 @@
 // Página interna
 // José Esteva <josesteva@soft4pilot.net>
 
+// Dependencias
 import React, { useContext, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { gql, useQuery } from '@apollo/client';
 
-// Recursos
-import Icon from '../../assets/icons/command.svg?react';
-
-// Componentes del sistema de diseño
-import {
-  Actions,
-  Command,
-  Markdown,
-  Heading,
-  Image,
-  Text,
-  Title
-} from '@soft4pilot/sd';
-
-// Contexto de la aplicación
+// Contexto
 import { Context } from '../../index';
 
 // Mecanismos
 import omitDeep from '../../hooks/utils/omitDeep';
 
-// Estilos específicos
+// Recursos
+import Icon from '../../assets/icons/command.svg?react';
+
+// Contenedores
+import Markdown  from '../../containers/Markdown';
+import Text from '../../containers/Text';
+
+// Componentes
+import  Title from '../../components/atoms/Title';
+import  Heading from '../../components/molecules/Heading';
+import { Actions, Command } from '../../components/organisms/Actions';
+
+// Estilos
 import style from './style.module.css';
 
 // Consulta de datos

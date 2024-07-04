@@ -2,36 +2,35 @@
 // Registro de pilotos
 // José Esteva <josesteva@soft4pilot.net>
 
+// Dependencias
 import React, { useContext, useRef } from 'react';
-
 import { isEmpty } from 'lodash';
 
-// Componentes
-import {
-  Box,
-  Button,
-  Checkbox,
-  Flexbox,
-  Form, Field,
-  Heading,
-  Input,
-  Label,
-  Select, Option,
-  Text,
-  Textarea,
-  Title
-} from '@soft4pilot/sd';
-
-// Contexto de la aplicación
+// Contexto
 // import { Context } from '../../index';
 
-// Mecanismos utilizados
+// Mecanismos
 import useForm from '../../hooks/form';
 
-// Estilos locales
+// Contenedores
+import Box  from '../../containers/Box';
+import Flexbox  from '../../containers/Flexbox';
+import Text from '../../containers/Text';
+
+// Componentes
+import Button from '../../components/atoms/Button';
+import  Checkbox from '../../components/atoms/Checkbox';
+import  Input from '../../components/atoms/Input';
+import  Label from '../../components/atoms/Label';
+import  Title from '../../components/atoms/Title';
+import { Select, Option } from '../../components/atoms/Select';
+import  Heading from '../../components/molecules/Heading';
+import { Form, Field } from '../../components/organisms/Form';
+
+// Estilos
 import style from './style.module.css';
 
-// Componente
+// Definición del componente
 const Registro = props => {
 
   // Utilizar el contexto de la aplicación

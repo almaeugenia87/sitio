@@ -1,0 +1,26 @@
+{/*
+  SD
+  Componentes
+  Guía de estilo
+  Header (Encbezado de página) - Descripción
+  José Esteva <josesteva@soft4pilot.net>
+*/}
+
+import { Canvas, Controls, Meta, Story } from '@storybook/blocks';
+import * as Stories from './styleguide.stories';
+
+<Meta of={Stories} />
+
+# Header (Encbezado de página)
+
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur qui ut
+beatae nam molestiae cum doloremque fugit nihil, vitae modi recusandae culpa
+odit facere eum vel reiciendis eius repellat, totam aperiam.
+
+<Canvas>
+  <div style={{position:'relative', top:'0', left:'0', right:'0', height:'80vh'}}>
+    <Story of={Stories.Componente} />
+  </div>
+</Canvas>
+
+<Controls />

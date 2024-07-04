@@ -1,0 +1,69 @@
+/*
+  SD
+  Componentes
+  Image (Imagen) - Estilos
+  José Esteva <josesteva@soft4pilot.net>
+
+*/
+
+/* Predeterminado */
+
+.image {
+
+}
+
+/* Ajuste */
+
+.fill {
+  object-fit: fill;
+}
+
+.contain {
+  object-fit: contain;
+}
+
+.cover {
+  object-fit: cover;
+}
+
+.none {
+  object-fit: none;
+}
+
+/* Filtro */
+
+.blur {
+  filter: blur(4px);
+}
+
+.bright {
+  filter: brightness(200%);
+}
+
+.contrast {
+  filter: contrast(300%);
+}
+
+.grayscale {
+  filter: grayscale(100%);
+}
+
+.huerotate {
+  filter: hue-rotate(270deg);
+}
+
+.invert {
+  filter: invert(100%);
+}
+
+.transparent {
+  filter: opacity(50%);
+}
+
+.saturate {
+  filter: saturate(7);
+}
+
+.sepia {
+  filter: sepia(100%);
+}

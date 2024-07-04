@@ -1,0 +1,27 @@
+/*
+  SD
+  Retículas
+  Markdown (Contenido dinámico)
+  José Esteva <josesteva@soft4pilot.net>
+*/
+
+.markdown {
+
+  display: flex;
+  flex-direction: column;
+
+  font-family: var(--font-family);
+  font: var(--font-medium);
+
+  color: var(--color-black);
+
+  padding: 0;
+  margin: 0;
+
+}
+
+.markdown img {
+
+  margin: 8px auto;
+
+}

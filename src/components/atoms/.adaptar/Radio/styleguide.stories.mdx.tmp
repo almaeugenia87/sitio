@@ -1,0 +1,63 @@
+<!--
+  SD
+  Documentación
+  Radio (Selección de opción)
+-->
+
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs';
+import { withDesign } from 'storybook-addon-designs';
+import Radio from './index';
+
+<Meta
+  title="Átomos/Radio"
+  component={Radio}
+  decorators={[ withDesign ]}
+/>
+
+# Radio (Selección de opción)
+
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur qui ut
+beatae nam molestiae cum doloremque fugit nihil, vitae modi recusandae culpa
+odit facere eum vel reiciendis eius repellat, totam aperiam. Molestiae error
+voluptatibus et neque vel libero, harum nam quibusdam mollitia, sapiente rerum
+iste modi sit deserunt? Officiis, quaerat!
+
+Este componente debe recibir desde fuera una propiedad **defaultValue**
+o una propiedad **value** y un método **onChange()**.
+
+<Canvas>
+  <Story
+    name="Componente"
+    parameters={{ design: { type: 'figma', url: 'https://www.figma.com/file/tyBKC7ndaq3XNOCERB1q8H/Componentes?node-id=1850%3A1357' }}}
+    argTypes={{
+      size: {
+        name: 'size',
+        type: { name: 'string', required: false },
+        description: 'Tamaño del titulo',
+        control: 'select',
+        options: ['large','medium','small']
+      },
+      color: {
+        name: 'color',
+        type: { name: 'string', required: false },
+        description: 'Color de la selección de opciones',
+        control: 'select',
+        options: ['primary','secondary','neutral']
+      }
+    }}
+    args={{
+      size: 'medium',
+      color: 'primary',
+      name: 'ejemplo'
+    }}
+  >
+    {(args) =>
+      <div style={{display:'flex', gap:'16px'}}>
+        <Radio defaultValue='1' defaultChecked={true} {...args}>Etiqueta</Radio>
+        <Radio defaultValue='2' {...args}>Etiqueta</Radio>
+      </div>
+    }
+  </Story>
+</Canvas>
+
+<ArgsTable story='Componente' />

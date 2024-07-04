@@ -1,0 +1,67 @@
+<!--
+  SD
+  Documentación
+  Select (Lista de selección)
+-->
+
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs';
+import { withDesign } from 'storybook-addon-designs';
+
+import Select from './index';
+
+export const valor = 4;
+
+<Meta
+  title="Átomos/Select"
+  component={Select}
+  decorators={[ withDesign ]}
+/>
+
+# Select (Lista de selección)
+
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur qui ut
+beatae nam molestiae cum doloremque fugit nihil, vitae modi recusandae culpa
+odit facere eum vel reiciendis eius repellat, totam aperiam. Molestiae error
+voluptatibus et neque vel libero, harum nam quibusdam mollitia, sapiente rerum
+iste modi sit deserunt? Officiis, quaerat!
+
+<Canvas>
+  <Story
+    name="Componente"
+    parameters={{ design: { type: 'figma', url: 'https://www.figma.com/file/tyBKC7ndaq3XNOCERB1q8H/Componentes?node-id=1612%3A1370' }}}
+    argTypes={{
+      color: {
+        name: 'color',
+        type: { name: 'string', required: false },
+        description: 'Color de la lista de selección',
+        control: 'select',
+        options: ['primary','secondary','neutral']
+      },
+      placeholder: {
+        name: 'placeholder',
+        type: { name: 'string', required: false },
+        description: 'Texto de ayuda',
+        control: 'text'
+      }
+    }}
+    args={{
+      placeholder: 'Seleccionar...',
+      color: 'neutral',
+      onChange: (e) => console.log("Se seleccionó el valor " + e.target.value),
+      disabled: false,
+      value: valor
+    }}
+  >
+      {(args) =>
+        <Select {...args}>
+          <Select.Option value="1">Uno</Select.Option>
+          <Select.Option value="2">Dos</Select.Option>
+          <Select.Option value="3">Tres</Select.Option>
+          <Select.Option value="4">Cuatro</Select.Option>
+          <Select.Option value="5">Cinco</Select.Option>
+        </Select>
+      }
+  </Story>
+</Canvas>
+
+<ArgsTable story='Componente' />

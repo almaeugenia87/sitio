@@ -1,0 +1,104 @@
+/*
+  SD
+  Retículas
+  Box (Caja)
+  José Esteva <josesteva@soft4pilot.net>
+  México
+*/
+
+.box {
+
+  display: block;
+  border-style: none;
+
+}
+
+/* Espacio */
+
+.padding-vertical-tiny {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.padding-vertical-small {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.padding-vertical-medium {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.padding-vertical-large {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.padding-vertical-huge {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.padding-horizontal-tiny {
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+.padding-horizontal-small {
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+.padding-horizontal-medium {
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.padding-horizontal-large {
+  padding-right: 32px;
+  padding-left: 32px;
+}
+
+.padding-horizontal-huge {
+  padding-right: 64px;
+  padding-left: 64px;
+}
+
+/* Color */
+
+.primary {
+  background: var(--color-primary);
+}
+
+.primary.dark {
+  background: var(--color-primary-dark);
+}
+
+.primary.light {
+  background: var(--color-primary-light);
+}
+
+.secondary {
+  background: var(--color-secondary);
+}
+
+.secondary.dark {
+  background: var(--color-secondary-dark);
+}
+
+.secondary.light {
+  background: var(--color-secondary-light);
+}
+
+.neutral {
+  background: var(--color-neutral);
+}
+
+.neutral.dark {
+  background: var(--color-neutral-dark);
+}
+
+.neutral.light {
+  background: var(--color-neutral-light);
+}

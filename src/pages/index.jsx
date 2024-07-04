@@ -5,24 +5,17 @@
 import React, { lazy, Suspense, useContext, useEffect, useState } from 'react';
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 
-// Componentes
-import {
-  Button,
-  Header,
-  Heading,
-  Item,
-  Label,
-  Link,
-  Title
-} from '@soft4pilot/sd';
-
-// Contexto de la aplicación
+// Contexto
 import { Context } from '../index';
 
-// Plantillas utilizadas
-import Footer from '../templates/Footer';
+// Componentes
+import Label from '../components/atoms/Label';
+import Link from '../components/atoms/Link';
+import { Item } from '../components/organisms/Menu';
+import Footer from '../components/organisms/Footer';
+import Header from '../components/organisms/Header';
 
-// Encbezado, área de trbajo y pie de página
+// Plantilla
 const Template = () => {
 
   // Navegación
@@ -86,12 +79,6 @@ const Template = () => {
         ))}
       </Header>
       <main style={{ zIndex:'-1' }}>
-        {/* { context.currentPage && context.currentPage.route === '/' && <Hero callToAction={callToAction} version /> }
-        { context.currentPage && context.currentPage.route !== '/' &&
-          <Heading space="medium large" color="primary" style={{ position:'sticky', top:'0', zIndex:'100' }}>
-            <Title color="white">{context.currentPage.title}</Title>
-          </Heading>
-        } */}
         <Routes>
           { context.pages.map((page, i) => {
             // Crear un componente dinámico  

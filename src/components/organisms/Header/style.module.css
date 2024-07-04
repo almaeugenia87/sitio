@@ -1,0 +1,204 @@
+/*
+  SD
+  Componentes
+  Header (Encabezado) - Estilos
+  José Esteva <josesteva@soft4pilot.net>
+*/
+
+.header {
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 0px;
+
+}
+
+.header.open {
+
+  overflow: visible;
+
+}
+
+/* Enlaces */
+
+.header > .links {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  flex-grow: 0;
+
+  height: 80px;
+  width: 100%;
+
+  padding: 0 16px;
+
+  background: var(--color-primary-dark);
+
+}
+
+.header > .links svg {
+
+  color: var(--color-white);
+  cursor: pointer;
+
+}
+
+.header > .links > svg {
+
+  width: 48px;
+  height: 48px;
+
+}
+
+.header > .links > span > svg {
+
+  width: 32px;
+  height: 32px;
+
+}
+
+/* Contenido */
+
+.header > .content {
+
+  position: fixed;
+
+  z-index: 9999;      /* Siempre hasta arriba */
+
+  top: 80px;
+  bottom: 0;          /* Extender el menú en toda la pantalla */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  opacity: 0.85;
+  width: 100%;
+  padding: 24px;
+
+  background: var(--color-secondary);
+
+  /* Efecto */
+  transform: translateX(100%);
+  animation: slide-out 0.5s forwards;
+
+}
+
+.header > .content.open {
+
+  /* Efecto */
+  animation: slide-in 1s forwards;
+
+}
+
+.logo {
+  color: var(--color-white);
+  width: var(--icon-size-large);
+  height: var(--icon-size-large);
+}
+
+.logo {
+  color: var(--color-white);
+  width: var(--icon-size-medium);
+  height: var(--icon-size-medium);
+}
+
+/* Deshabilitar el desplazamiento vertical cuando esté abierto el menú */
+body:has(.header > .content.open) {
+
+  height: 100%;
+  overflow: hidden;
+
+}
+
+@media screen and (min-width: 1024px) {
+
+  .header {
+
+    position: relative;
+    flex-direction: row;
+    min-height: auto;
+
+  }
+
+  .header > .links {
+
+    width: auto;
+
+  }
+
+  .header > .links > span {
+
+    display: none;
+
+  }
+
+  .header > .content {
+
+    position: relative;
+
+    top: 0;
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+    opacity: 1.0;
+    height: 80px;
+    background: var(--color-primary-dark);
+
+    transform: none !important;
+    transition: none !important;
+
+  }
+
+  /* TEMPORAL : Buscar una mejor solución para modificar la dirección del Menú */
+  /* .header > .content ul {
+
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+
+  }
+
+  .header > .content ul > li {
+
+    margin: auto 0;
+
+  } */
+
+  /* .content li:not(:last-of-type) svg {
+
+    display: none;
+
+  }
+
+  .content li:last-of-type span * {
+
+    display: none;
+
+  }
+
+  .content li:last-of-type span svg {
+
+    display: inline;
+
+  } */
+
+}
+
+/* Animaciones */
+
+@keyframes slide-in {
+    100% { transform: translateX(0%); }
+}
+
+@keyframes slide-out {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(100%); }
+}

@@ -1,0 +1,101 @@
+<!--
+  SD
+  Documentación
+  Form (Formulario)
+  José Esteva <josesteva@cic.unam.mx>
+-->
+
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs';
+import { withDesign } from 'storybook-addon-designs';
+
+import Checkbox from '../../atoms/Checkbox';
+import Input from '../../atoms/Input';
+import Label from '../../atoms/Label';
+import Radio from '../../atoms/Radio';
+import Select from '../../atoms/Select';
+import Textarea from '../../atoms/Textarea';
+import Flexbox from '../../../containers/Flexbox';
+
+import Form from './index';
+
+<Meta
+  title="Organismos/Form"
+  component={Form}
+  decorators={[ withDesign ]}
+/>
+
+export const values = {
+  text: null,
+  checkbox: {
+    uno: false,
+    dos: false,
+    tres: false
+  },
+  select: null,
+  radio: '1',
+  textarea: null
+}
+
+export const handleChange = (event) => {
+  const name = event.target.name;
+  const value = event.target.value;
+  console.log(`El campo ${name} cambiaría al valor ${value}.`);
+}
+
+# Form (Formulario)
+
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur qui ut
+beatae nam molestiae cum doloremque fugit nihil, vitae modi recusandae culpa
+odit facere eum vel reiciendis eius repellat, totam aperiam. Molestiae error
+voluptatibus et neque vel libero, harum nam quibusdam mollitia, sapiente rerum
+iste modi sit deserunt? Officiis, quaerat!
+
+<Canvas>
+  <Story
+    name="Componente"
+    parameters={{ design: { type: 'figma', url: 'https://www.figma.com/file/tyBKC7ndaq3XNOCERB1q8H/Componentes?node-id=2408%3A2496' }}}
+    argTypes={{
+      layout: {
+        name: 'layout',
+        type: { name: 'string', required: false },
+        description: 'Disposición de los elementos',
+        control: 'select',
+        options: ['stacked','columns','inline']
+      }
+    }}
+    args={{
+      layout: 'stacked'
+    }}
+  >
+    {(args) =>
+      <Form {...args}>
+        <Form.Field>
+          <Label accent="bold">Texto</Label>
+          <Input defaultValue={values.text} onChange={handleChange} placeholder="Ingresar texto..." style={{width:'100%'}}/>
+        </Form.Field>
+        <Form.Field>
+          <Label accent="bold">Seleccionar una opción</Label>
+          <Flexbox gap="medium">
+            <Radio name="radio" defaultValue='1' defaultChecked={true} onChange={handleChange}>Uno</Radio>
+            <Radio name="radio" defaultValue='2' onChange={handleChange}>Dos</Radio>
+            <Radio name="radio" defaultValue='3' onChange={handleChange}>Tres</Radio>
+          </Flexbox>
+        </Form.Field>
+        <Form.Field>
+          <Label accent="bold">Selección</Label>
+          <Select defaultValue={values.select} onChange={handleChange} placeholder="Seleccionar..." style={{width:'100%'}}>
+            <Select.Option value="1">Uno</Select.Option>
+            <Select.Option value="2">Dos</Select.Option>
+            <Select.Option value="3">Tres</Select.Option>
+          </Select>
+        </Form.Field>
+        <Form.Field>
+          <Label accent="bold">Área de texto</Label>
+          <Textarea defaultValue={values.textarea} onChange={handleChange} placeholder="Ingrersar párrafo..." />
+        </Form.Field>
+      </Form>
+    }
+  </Story>
+</Canvas>
+
+<ArgsTable story='Componente' />

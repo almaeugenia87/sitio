@@ -1,0 +1,59 @@
+<!--
+  SD
+  Documentación
+  Búsqueda (Search)
+-->
+
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs';
+import { withDesign } from 'storybook-addon-designs';
+import Search from './index';
+
+<Meta
+  title="Moléculas/Search"
+  component={Search}
+  decorators={[ withDesign ]}
+/>
+
+# Search (Búsqueda)
+
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur qui ut
+beatae nam molestiae cum doloremque fugit nihil, vitae modi recusandae culpa
+odit facere eum vel reiciendis eius repellat, totam aperiam. Molestiae error
+voluptatibus et neque vel libero, harum nam quibusdam mollitia, sapiente rerum
+iste modi sit deserunt? Officiis, quaerat!
+
+<Canvas>
+  <Story
+    name="Componente"
+    parameters={{ design: { type: 'figma', url: 'https://www.figma.com/file/tyBKC7ndaq3XNOCERB1q8H/Componentes?node-id=1585%3A1600' }}}
+    argTypes={{
+      color: {
+        name: 'color',
+        type: { name: 'string', required: false },
+        description: 'Color del elemento',
+        control: 'select',
+        options: ['black','primary','secondary','neutral']
+      },
+      placeholder: {
+        name: 'placeholder',
+        type: { name: 'string', required: false },
+        description: 'Texto de ayuda',
+        control: 'text'
+      },
+      fold: {
+        name: 'fold',
+        type: { name: 'bool', required: false },
+        description: 'Ocultar el control de entrada de texto',
+        control: { disable: true }
+      }
+    }}
+    args={{
+      placeholder: 'Buscar...',
+      fold: true
+    }}
+  >
+    {(args) => <Search {...args}/>}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Componente"/>

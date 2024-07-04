@@ -1,0 +1,159 @@
+/*
+  SD
+  Estilos
+  Radio (Selección de opción)
+*/
+
+/* Contenedor */
+
+.container {
+
+  display: flex;
+  flex-direction: row;
+
+  gap: 16px;
+
+  /* Poner aquí los estilos para crear la lista de opciones (que por ahora será simpre horizontal) */
+
+}
+
+.option {
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* padding: 0px; */
+
+}
+
+/* Control */
+
+.control {
+
+  position: relative;
+
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: var(--font-size-medium);
+  height: var(--font-size-medium);
+
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 50%;
+
+  background: var(--color-white);
+
+}
+
+.control:hover {
+  cursor: pointer;
+}
+
+.control input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.control input ~ span {
+
+  border-radius: 50%;
+
+  background: var(--color-white);
+
+}
+
+/* Tamaño */
+
+.large {
+  padding: 2px;
+  width: var(--font-size-large);
+  height: var(--font-size-large);
+  margin-right: 8px;
+}
+
+.large input ~ span {
+
+  width: calc(var(--font-size-large)/2);
+  height: calc(var(--font-size-large)/2);
+
+}
+
+.medium {
+  padding: 1px;
+  width: var(--font-size-medium);
+  height: var(--font-size-medium);
+  margin-right: 6px;
+}
+
+.medium input ~ span {
+
+  width: calc(var(--font-size-medium)/2);
+  height: calc(var(--font-size-medium)/2);
+
+}
+
+.small {
+  padding: 1px;
+  width: var(--font-size-small);
+  height: var(--font-size-small);
+  margin-right: 4px;
+}
+
+.small input ~ span {
+
+  width: calc(var(--font-size-small)/2);
+  height: calc(var(--font-size-small)/2);
+
+}
+
+
+/* Color */
+
+.primary {
+  border-color: var(--color-primary);
+}
+
+.primary input:checked ~ span {
+  background: var(--color-primary);
+}
+
+.secondary {
+  border-color: var(--color-secondary);
+}
+
+.secondary input:checked ~ span {
+  background: var(--color-secondary);
+}
+
+.neutral {
+  border-color: var(--color-black);
+}
+
+.neutral input:checked ~ span {
+  background: var(--color-black);
+}
+
+/* Elemento deshabilitado */
+
+.disabled-true  {
+  background: var(--color-neutral-light);
+  border-color: var(--color-neutral-dark);
+}
+
+.disabled-true input ~ span {
+  background: var(--color-neutral-light);
+}
+
+.disabled-true input:checked ~ span {
+  background: var(--color-neutral-dark);
+}
+
+.disabled-true.control:hover {
+  cursor: default;
+}

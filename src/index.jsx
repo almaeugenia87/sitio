@@ -10,13 +10,13 @@ import { HashRouter } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import { set } from 'lodash';
 
-// Componentes y mecanismos del sistema de diseño
-import { useWindow } from '@soft4pilot/sd';
-
 // Configuración
 import config from './config.json';
 
-// Estilos globales
+// Mecanismos
+import useWindow from './hooks/window';
+
+// Estilos
 import './styles.css';
 
 // Plantilla
@@ -25,7 +25,7 @@ import Template from './pages';
 // Configuración del acceso a los datos
 const client = new ApolloClient({
 
-  uri: import.meta.env.S4P_API_URL + '/graphql',
+  uri: import.meta.env.LPDM_API_URL + '/graphql',
   cache: new InMemoryCache()
 
 });

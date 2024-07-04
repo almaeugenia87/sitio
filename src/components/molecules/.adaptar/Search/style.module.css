@@ -1,0 +1,71 @@
+/*
+  SD
+  Estilos
+  Search (Búsqueda)
+*/
+
+/* Contenedor */
+
+.container {
+
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  padding-left: 8px;
+  padding-right: 8px;
+
+  background: var(--color-white);
+
+  border-radius: 20px;
+  border-width: 1.5px; /* NOTA: Probablemente se adecuado incluir tokens de grosores de bordes */
+  border-style: solid;
+
+}
+
+.container > input {
+  flex-grow: 1;
+}
+
+.container > svg {
+
+  flex-shrink: 0;
+  cursor: pointer;
+
+}
+
+
+
+/* Color */
+
+.black {
+    border-color: var(--color-black);
+}
+
+.primary {
+    border-color: var(--color-primary);
+}
+
+.secondary {
+    border-color: var(--color-secondary);
+}
+
+.neutral {
+    border-color: var(--color-neutral-dark);
+}
+
+/* Fold */
+
+.fold-false {
+
+  justify-content: flex-start;
+
+  width: 100%;
+  padding-left: 12px;
+  padding-right: 10px;
+
+}

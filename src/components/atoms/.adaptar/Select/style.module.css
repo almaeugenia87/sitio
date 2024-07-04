@@ -1,0 +1,100 @@
+/*
+  SD
+  Estilos
+  Select (Lista de selección)
+*/
+
+/* Contenedor */
+
+.control {
+
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+
+  padding: 4px 8px 4px 12px;
+
+  border-style: solid;
+  border-width: 2px;
+
+  background: var(--color-white);
+
+  font: var(--font-sans-medium);
+
+  color: var(--color-black);
+
+  width: 100%;
+
+}
+
+/* Control original */
+
+.control select {
+
+  z-index: 1;
+  flex-grow: 1;
+  flex-basis: auto;
+
+  appearance: none;
+
+  background-color: transparent;
+  border: none;
+
+  outline: none;
+  padding-right: 32px;
+
+  color: inherit;
+
+  font: inherit;
+  line-height: inherit;
+
+  width: inherit;
+
+}
+
+.control select option {
+  color: var(--color-black);
+  font: inherit;
+}
+
+
+/* Color */
+
+.primary {
+  border-color: var(--color-primary);
+}
+
+/* Truco para estilar el placeholder */
+.primary select:invalid,
+.primary select option:first-of-type {
+  color: var(--color-primary-light);
+}
+
+.secondary {
+  border-color: var(--color-secondary);
+}
+
+.secondary select:invalid,
+.secondary select option:first-of-type {
+  color: var(--color-secondary-light);
+}
+
+.neutral {
+  border-color: var(--color-black);
+}
+
+.neutral select:invalid,
+.neutral select option:first-of-type {
+  color: var(--color-neutral);
+}
+
+/* Elemento deshabilitado */
+
+.control.disabled-true, .control.disabled-true select:disabled {
+  /* color: var(--color-neutral-dark); */
+  background: var(--color-neutral-light);
+  /* border-color: var(--color-neutral); */
+}

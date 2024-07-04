@@ -1,0 +1,48 @@
+/*
+  SD
+  Estilos
+  Clases globales
+  José Esteva <josesteva@soft4pilot.net>
+*/
+
+/* Colores */
+
+.primary {
+  background: var(--color-primary);
+}
+
+.secondary {
+  background: var(--color-secondary);
+}
+
+.neutral {
+  background: var(--color-neutral);
+}
+
+.accent {
+  background: var(--color-accent);
+}
+
+.primary.light {
+  background: var(--color-primary-light);
+}
+
+.secondary.light {
+  background: var(--color-secondary-light);
+}
+
+.neutral.light {
+  background: var(--color-neutral-light);
+}
+
+.primary.dark {
+  background: var(--color-primary-dark);
+}
+
+.secondary.dark {
+  background: var(--color-secondary-dark);
+}
+
+.neutral.dark {
+  background: var(--color-neutral-dark);
+}

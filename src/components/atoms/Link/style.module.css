@@ -1,0 +1,91 @@
+/*
+  SD
+  Componentes
+  Link (Enlace) _ Estilos
+  José Esteva <josesteva@soft4pilot.net>
+  
+*/
+
+/* Predeterminado */
+
+
+
+.link {
+  text-decoration: none;
+}
+
+.link img {
+  outline-style: none;
+  outline-width: 3px;
+}
+
+/* Estados y eventos */
+
+.link:hover {
+  cursor: pointer;
+}
+
+.link span:hover {
+  text-decoration: underline;
+}
+
+.link img:hover {
+  outline-style: solid;
+}
+
+/* Colores */
+
+.black *:hover {
+  color: var(--color-black);
+  outline-color: var(--color-black);
+}
+
+.primary *:hover {
+  color: var(--color-primary);
+  outline-color: var(--color-primary);
+}
+
+.primary.dark *:hover {
+  color: var(--color-primary-dark);
+  outline-color: var(--color-primary-dark);
+}
+
+.primary.light *:hover {
+  color: var(--color-primary-light);
+  outline-color: var(--color-primary-light);
+}
+
+.secondary *:hover {
+  color: var(--color-secondary);
+  outline-color: var(--color-secondary);
+}
+
+.secondary.dark *:hover {
+  color: var(--color-secondary-dark);
+  outline-color: var(--color-secondary-dark);
+}
+
+.secondary.light *:hover {
+  color: var(--color-secondary-light);
+  outline-color: var(--color-secondary-light);
+}
+
+.neutral *:hover {
+  color: var(--color-neutral);
+  outline-color: var(--color-neutral);
+}
+
+.neutral.dark *:hover {
+  color: var(--color-neutral-dark);
+  outline-color: var(--color-neutral-dark);
+}
+
+.neutral.light *:hover {
+  color: var(--color-neutral-light);
+  outline-color: var(--color-neutral-light);
+}
+
+.white *:hover {
+  color: var(--color-white);
+  outline-color: var(--color-white);
+}

@@ -1,0 +1,82 @@
+/*
+  SD
+  Estilos
+  Estilos predeterminados
+  José Esteva <josesteva@soft4pilot.net>
+*/
+
+* {
+
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+
+}
+
+html, body {
+
+  overflow-anchor: none;  /* Evitar que los componentes se muevan al regenerarse */
+
+}
+
+a {
+
+  text-decoration: underline;
+  color: var(--color-neutral-dark);
+
+}
+
+a:visited {
+
+  color: var(--color-neutral-dark);
+
+}
+
+a:hover {
+
+  color: var(--color-neutral);
+
+}
+
+p {
+
+  margin: 8px 0;
+  text-align: justify;
+
+}
+
+h1 {
+
+  font: var(--font-large-bold);
+  font-size: calc(var(--font-size-large) * 1.5);
+  line-height: calc(var(--line-height-large) * 1.5);
+
+}
+
+h2 {
+
+  font: var(--font-medium-bold);
+  font-size: calc(var(--font-size-medium) * 1.5);
+  line-height: calc(var(--line-height-medium) * 1.5);
+
+  color: var(--color-neutral-dark);
+
+}
+
+h3 {
+
+  font: var(--font-small-bold);
+  font-size: calc(var(--font-size-small) * 1.5);
+  line-height: calc(var(--line-height-small) * 1.5);
+
+  color: var(--color-neutral);
+
+}
+
+/* NOTA 1: Si se pueden estilar directamente incluir también: select, input, textarea, checkbox y radio. */
+
+/* NOTA 2: Incluir diseño adaptable a travñes de @media queries */  
+
+/*
+: focus { }
+*/

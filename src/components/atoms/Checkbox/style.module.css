@@ -1,0 +1,159 @@
+/*
+  SD
+  Estilos
+  Checkbox (Casilla de verificación)
+  José Esteva <josesteva@soft4pilot.net>
+*/
+
+/* Contenedor */
+
+.container {
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+
+}
+
+/* Control */
+
+.control {
+
+  position: relative;
+
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  border-style: solid;
+
+  background: var(--color-white);
+
+  padding: 2px;
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  border-radius: 3px;
+  border-width: 1.5px;
+
+}
+
+.control svg {
+
+  width: 12px;
+  height: 12px;
+
+  /* margin-top: 4px; */
+
+}
+
+.control:hover {
+  cursor: pointer;
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.input ~ svg {
+  visibility: hidden;
+}
+
+.input:checked ~ svg {
+  visibility: visible;
+}
+
+/* Tamaño */
+
+/* .large {
+  padding: 2px;
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+  border-radius: 4px;
+  border-width: 2px;
+}
+
+.large > svg {
+
+  width: calc(var(--font-size-large) * 0.75);
+  height: calc(var(--font-size-large) * 0.75);
+
+}
+
+.medium {
+  padding: 1px;
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  border-radius: 3px;
+  border-width: 1.5px;
+}
+
+.medium > svg {
+
+  width: calc(var(--font-size-medium) * 0.75);
+  height: calc(var(--font-size-medium) * 0.75);
+
+}
+
+.small {
+  padding: 1px;
+  width: 8px;
+  height: 8px;
+  margin-right: 4px;
+  border-radius: 2px;
+  border-width: 1px;
+}
+
+.small > svg {
+
+  width: calc(var(--font-size-small) * 0.75);
+  height: calc(var(--font-size-small) * 0.75);
+
+}
+
+*/
+
+/* Color */
+
+.primary {
+  border-color: var(--color-primary);
+}
+
+.primary svg {
+  color: var(--color-primary);
+}
+
+.secondary {
+  border-color: var(--color-secondary);
+}
+
+.secondary svg {
+  color: var(--color-secondary);
+}
+
+.neutral {
+  border-color: var(--color-neutral);
+}
+
+.neutral svg {
+  color: var(--color-neutral);
+}
+
+/* Elemento deshabilitado */
+
+.disabled-true {
+  background: var(--color-neutral-light);
+  border-color: var(--color-neutral-dark);
+}
+
+.disabled-true.control:hover {
+  cursor: default;
+}

@@ -1,14 +1,17 @@
 /*
-  Soft4pilot
+  LPDM
   Estilos globales
   José Esteva <josesteva@soft4pilot.net>
 */
 
 /* [lock:global-styles] */
 
-@import "@soft4pilot/sd/styles";
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Croissant+One&display=swap');
 
-/* Aquí se pueden sobre escribir reglas del sistema de diseño */
+@import 'styles/tokens/style.css';
+@import 'styles/default/style.css';
+
+/* [/lock:global-styles] */
 
 html, body {
 
@@ -16,5 +19,3 @@ html, body {
   background: var(--color-white);
 
 }
-
-/* [/lock:global-styles] */

@@ -1,10 +1,10 @@
 {
   "id": 1,
-  "name": "APW",
-  "slogan": "Arquitectura de los Productos Web",
+  "name": "ASW",
+  "slogan": "Arquitectura del Sitio Web",
   "license": "MIT",
-  "version": "1.4",
-  "email": "buzon@soft4pilot.net",
+  "version": "0.1",
+  "email": "alma@lospastelesdemama.com",
   "pages": [
     {
       "icon": "home",

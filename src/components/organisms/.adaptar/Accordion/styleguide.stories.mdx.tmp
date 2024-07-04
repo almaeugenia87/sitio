@@ -1,0 +1,100 @@
+<!--
+  SD
+  Organismos
+  Accordion (Acordeón)
+  Raul Salinas <raul.teo.salinas@cic.unam.mx>
+  José Esteva <josesteva@cic.unam.mx>
+-->
+
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs';
+import { withDesign } from 'storybook-addon-designs';
+
+import Box from '../../../containers/Box';
+import Text from '../../atoms/Text';
+
+import Accordion from './index';
+
+<Meta
+  title="Organismos/Accordion"
+  component={Accordion}
+  decorators={[ withDesign ]}
+/>
+
+# Accordion (Pestañas)
+
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur qui ut
+beatae nam molestiae cum doloremque fugit nihil, vitae modi recusandae culpa
+odit facere eum vel reiciendis eius repellat, totam aperiam. Molestiae error
+voluptatibus et neque vel libero, harum nam quibusdam mollitia, sapiente rerum
+iste modi sit deserunt? Officiis, quaerat!
+
+<Canvas>
+  <Story
+    name="Componente"
+    parameters={{ design: { type: 'figma', url: 'https://www.figma.com/file/tyBKC7ndaq3XNOCERB1q8H/Componentes?type=design&node-id=4000%3A1489&mode=dev' }}}
+    argTypes={{
+      defaultPath: {
+        name: 'defaultPath',
+        type: { name: 'text', required: false },
+        description: 'Ruta predeterminada.',
+        control: 'text'
+      },
+      rootPath: {
+        name: 'rootPath',
+        type: { name: 'text', required: false },
+        description: 'Ruta real donde estará Accordion.',
+        control: 'text'
+      },
+      onChange: {
+        name: 'onChange',
+        type: { name: 'function', required: false },
+        description: 'Función que se ejecuta al cambiar la ruta.',
+        control: null
+      }
+    }}
+    args={{
+      defaultPath: '/uno',
+      onChange: path => console.log('La ruta cambió a: ' + path)
+    }}
+  >
+    {(args) =>
+      <Accordion {...args}>
+        <Accordion.Item path="/uno" title="Titulo">
+          <Box space="medium large">
+            <Text>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur qui ut
+              beatae nam molestiae cum doloremque fugit nihil, vitae modi recusandae culpa
+              odit facere eum vel reiciendis eius repellat, totam aperiam. Molestiae error
+              voluptatibus et neque vel libero, harum nam quibusdam mollitia, sapiente rerum
+              iste modi sit deserunt? Officiis, quaerat!
+            </Text>
+          </Box>
+        </Accordion.Item>
+        <Accordion.Item path="/dos" title="Titulo">
+          <Box space="medium large">
+            <Text>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur qui ut
+              beatae nam molestiae cum doloremque fugit nihil, vitae modi recusandae culpa
+              odit facere eum vel reiciendis eius repellat, totam aperiam. Molestiae error
+              voluptatibus et neque vel libero, harum nam quibusdam mollitia, sapiente rerum
+              iste modi sit deserunt? Officiis, quaerat!
+            </Text>
+          </Box>
+        </Accordion.Item>
+        <Accordion.Item path="/tres" title="Titulo">
+          <Box space="medium large">
+            <Text>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur qui ut
+              beatae nam molestiae cum doloremque fugit nihil, vitae modi recusandae culpa
+              odit facere eum vel reiciendis eius repellat, totam aperiam. Molestiae error
+              voluptatibus et neque vel libero, harum nam quibusdam mollitia, sapiente rerum
+              iste modi sit deserunt? Officiis, quaerat!
+            </Text>
+          </Box>
+        </Accordion.Item>
+      </Accordion>
+    }
+  </Story>
+</Canvas>
+
+<ArgsTable story='Componente' />
