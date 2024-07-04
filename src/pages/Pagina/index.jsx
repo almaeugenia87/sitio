@@ -21,8 +21,8 @@ import Markdown  from '../../containers/Markdown';
 import Text from '../../containers/Text';
 
 // Componentes
-import  Heading from '../../components/atoms/Button';
 import  Title from '../../components/atoms/Title';
+import  Heading from '../../components/molecules/Heading';
 import { Actions, Command } from '../../components/organisms/Actions';
 
 // Estilos

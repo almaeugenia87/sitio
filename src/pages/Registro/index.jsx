@@ -23,7 +23,7 @@ import  Checkbox from '../../components/atoms/Checkbox';
 import  Input from '../../components/atoms/Input';
 import  Label from '../../components/atoms/Label';
 import  Title from '../../components/atoms/Title';
-import { Select, Option } from '../../components/organisms/Select';
+import { Select, Option } from '../../components/atoms/Select';
 import  Heading from '../../components/molecules/Heading';
 import { Form, Field } from '../../components/organisms/Form';
 

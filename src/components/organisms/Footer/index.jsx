@@ -7,11 +7,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Label } from '@soft4pilot/sd';
+// Componentes
+import Label from '../../atoms/Label';
 
+// Estilo
 import style from './style.module.css';
 
-// Componente
+// Definición del componente
 const Footer = props => {
 
   const {brand = false, color = 'primary', hue, children, ...other} = props;

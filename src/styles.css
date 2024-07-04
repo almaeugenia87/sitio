@@ -6,16 +6,10 @@
 
 /* [lock:global-styles] */
 
-@import "@soft4pilot/sd/styles";
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Croissant+One&display=swap');
 
-/* Aquí se pueden sobre escribir reglas del sistema de diseño */
-
-html, body {
-
-  height: 100%;
-  background: var(--color-white);
-
-}
+@import 'styles/tokens/style.css';
+@import 'styles/default/style.css';
 
 /* [/lock:global-styles] */
 

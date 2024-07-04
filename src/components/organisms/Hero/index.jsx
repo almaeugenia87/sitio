@@ -7,18 +7,19 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 
-// Componentes y mecanismos del sistema de diseño
-import {
-  Box,
-  Flexbox,
-  Label,
-  Title,
-  useStuck } from '@soft4pilot/sd';
-
-// Contexto de la aplicación
+// Contexto
 import { Context } from '../../../index';
 
+// Mecanismos
+import useStuck from '../../../hooks/stuck';
 
+// Contenedores
+import Box  from '../../../containers/Box';
+import Flexbox from '../../../containers/Flexbox';
+
+// Componentes
+import Label from '../../atoms/Label';
+import Title from '../../atoms/Title';  
 
 // Estilos locales
 import style from './style.module.css';

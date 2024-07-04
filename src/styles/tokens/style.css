@@ -13,8 +13,8 @@
   */
 
   /* Blanco y negro */
-  --color-black: #010612;
-  --color-white: #FBFCFF;
+  --color-black: #161518;
+  --color-white: #F6F2FA;
 
   /* Color neutral */
   --color-neutral: #8C9199;
@@ -22,17 +22,17 @@
   --color-neutral-light: #EFEFEF;
 
   /* Color secundario */
-  --color-secondary: #0FA16D;
-  --color-secondary-dark: #186F50;
-  --color-secondary-light: #EEF7F4;
+  --color-secondary: #0AB0F6;
+  --color-secondary-dark: #063E56;
+  --color-secondary-light: #D3E9F2;
 
   /* Color primario */
-  --color-primary: #125FD2;
-  --color-primary-dark: #133465;
-  --color-primary-light: #E5F0FF;
+  --color-primary: #8204FF;
+  --color-primary-dark: #2D005B;
+  --color-primary-light: #E9D3FF;
 
   /* Color de acento */
-  --color-accent: #FF7354;
+  --color-accent: #FF0099;
 
   /* Alias */
 
@@ -52,7 +52,7 @@
   * @presenter FontFamily
   */
 
-  --font-family: 'Quicksand', sans-serif;
+  --font-family: 'Alegreya Sans', sans-serif;
 
   /* TAMAÑO */
 
@@ -107,7 +107,7 @@
   */
 
   /* Tipogtafías completas */
-  --font-huge: var(--font-weight-medium) var(--font-size-huge)/var(--line-height-huge) var(--font-family);
+  --font-huge: var(--font-weight-medium) var(--font-size-huge)/var(--line-height-huge) 'Croissant One', serif;
   --font-huge-bold: var(--font-weight-bold) var(--font-size-huge)/var(--line-height-huge) var(--font-family);
   --font-huge-light: var(--font-weight-light) var(--font-size-huge)/var(--line-height-huge) var(--font-family);
   --font-large: var(--font-weight-medium) var(--font-size-large)/var(--line-height-large) var(--font-family);

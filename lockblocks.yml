@@ -6,11 +6,8 @@
 
 renameFiles: []
 replaceFiles:
-  - src/templates/Hero
-  - src/templates/Footer
 fillFiles:
   - src/hooks
-  - src/templates
 deleteFiles: []
 excludePaths:
   - .deleted
