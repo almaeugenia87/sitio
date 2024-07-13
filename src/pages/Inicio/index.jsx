@@ -56,6 +56,13 @@ const Query = gql`query {
   }
 }`;
 
+// Solicitud GET (Request).
+fetch('http://localhost/api')
+  .then(response => response.text())  // convertir a texto
+  // .then(response => response.json())  // convertir a json
+  .then(data => console.log(data))    //imprimir los datos en la consola
+  .catch(err => console.log('Error al acceder a los datos', err)); // Capturar errores
+
 // Definición del componente
 const Inicio = props => {
 
