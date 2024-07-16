@@ -2,6 +2,8 @@
 // Organismos
 // Pagination (Paginación)
 
+// NOTA: Sustituir la molécula <Link> por una etiqueta HTML <label>.
+
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
@@ -10,7 +12,7 @@ import style from './style.module.css';
 
 // Componentes
 import Icon from '../../atoms/Icon';
-import Label from '../../atoms/Label';
+import Link from '../../molecules/Link';
 
 // Definición del componente
 const Pagination = props => {
@@ -77,7 +79,7 @@ const Pagination = props => {
     { pages.slice(first - 1, first + size - 1).map((page, i) => (
 
       <div key={i} className={`${style.page} ${style[(page === value) ? 'selected' : '']} ${style[color]}`} onClick={() => changePage(page)}>
-        <Label size='medium'>{page}</Label>
+        <Link size='medium'>{page}</Link>
       </div>
 
     ))}

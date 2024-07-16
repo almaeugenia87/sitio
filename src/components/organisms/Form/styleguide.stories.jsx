@@ -5,8 +5,10 @@
   José Esteva (josesteva@soft4pilot.net)
 */
 
+// NOTA: Sustituir la molécula <Link> por una etiqueta HTML <label>.
+
 import Input from '../../atoms/Input';
-import Label from '../../atoms/Label';
+import Link from '../../atoms/Link';
 import { Select, Option } from '../../atoms/Select';
 
 import { Form, Field } from './index';
@@ -26,11 +28,11 @@ export const Componente = {
   render: () =>
     <Form>
       <Field>
-        <Label bold>Caja de texto</Label>
+        <Link bold>Caja de texto</Link>
         <Input color="primary" placeholder="Ingresar texto..." style={{width:'100%'}}/>
       </Field>
       <Field>
-        <Label bold>Lista de selección</Label>
+        <Link bold>Lista de selección</Link>
         <Select color="primary" placeholder="Seleccionar..." style={{width:'100%'}}>
           <Option value="1">Uno</Option>
           <Option value="2">Dos</Option>

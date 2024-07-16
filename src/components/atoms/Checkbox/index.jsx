@@ -3,6 +3,8 @@
 // Checkbox (Casilla de verificación)
 // José Esteva <josesteva@soft4pilot.net>
 
+// NOTA: Sustituir la molécula <Link> por una etiqueta HTML <label>.
+
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -11,7 +13,7 @@ import Check from '../../../assets/icons/check.svg?react';
 
 // Componentes
 // import Icon from '../Icon';
-import Label from '../Label';
+import Link from '../../molecules/Link';
 
 // Estilos
 import style from './style.module.css';
@@ -29,7 +31,7 @@ const Checkbox = props => {
         <input className={style.input} type="checkbox" disabled={disabled} {...other}/>
         <Check className={`${style.icon} ${style[color]}`} />
       </span>
-      <Label size="medium" color="black">{children}</Label>
+      <Link size="medium" color="black">{children}</Link>
     </label>
   )
 }

@@ -8,7 +8,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // Componentes
-import Label from '../../molecules/Link';
+import Link from '../../molecules/Link';
 
 // Estilo
 import style from './style.module.css';
@@ -24,7 +24,7 @@ const Footer = props => {
   return (
     <footer className={`${style.footer} ${style[brandClass]} ${style[color]} ${style[hue]}`} {...other}>
       {children}
-      { brand && <Label size="tiny" color={textColor} style={{bottom:'0'}}>&copy; Soft4pilot {new Date().getFullYear()}</Label> }
+      { brand && <Link size="tiny" color={textColor} style={{bottom:'0'}}>&copy; Soft4pilot {new Date().getFullYear()}</Link> }
     </footer>
   );
 

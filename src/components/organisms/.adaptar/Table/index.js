@@ -6,6 +6,8 @@
 // NOTA: Puse temporalmente el gestor de eventos onRowClick en el componente <TableData> para
 // evitar que se emita este evento al seleccionar/deseleccionar registros.
 
+// NOTA: Sustituir la molécula <Link> por una etiqueta HTML <label>.
+
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -15,7 +17,7 @@ import style from './style.module.css';
 // Componentes
 import Checkbox from '../../atoms/Checkbox';
 import Icon from '../../atoms/Icon';
-import Label from '../../atoms/Label';
+import Link from '../../atoms/Link';
 
 const Table = ({children, ...other}) => {
 
@@ -38,14 +40,14 @@ const TableRow = ({children, ...other}) => <tr {...other}>{children}</tr>
 // Etiqueta de encabezado
 const TableLabel = ({empty, children, ...other}) => (
   <th {...other}>
-    { !empty && <Label size="medium" bold>{children}</Label> }
+    { !empty && <Link size="medium" bold>{children}</Link> }
   </th>
 )
 
 // Datos
 const TableData = ({empty, children, ...other}) => (
   <td {...other}>
-    { !empty && <Label size="medium">{children}</Label> }
+    { !empty && <Link size="medium">{children}</Link> }
   </td>
 )
 
@@ -98,17 +100,17 @@ Table.Head = TableHead;
 Table.Body = TableBody;
 Table.Foot = TableFoot;
 Table.Row = TableRow;
-Table.Label = TableLabel;
+Table.Link = TableLabel;
 Table.Data = TableData;
 Table.Action = TableAction;
 Table.Selector = TableSelector
 
-// // Parámetros <Table.Label>
+// // Parámetros <Table.Link>
 // TableLabel.propTypes = {
 //   empty: PropTypes.bool
 // }
 //
-// // Valores predeterminados <Table.Label>
+// // Valores predeterminados <Table.Link>
 // TableLabel.defaultProps = {
 //   empty: false
 // }

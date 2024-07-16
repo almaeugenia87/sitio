@@ -18,7 +18,7 @@ import Box  from '../../../containers/Box';
 import Flexbox from '../../../containers/Flexbox';
 
 // Componentes
-import Label from '../../molecules/Link';
+import Link from '../../molecules/Link';
 import Title from '../../atoms/Title';  
 
 // Estilos locales
@@ -47,7 +47,7 @@ const Hero = props => {
             { !stuck && <Title role="h2" size="medium" color="white" align="center">{context.slogan}</Title> }
           </Flexbox>
           { !stuck && callToAction }
-          { !stuck && version && <Label size="small" color="white" style={{ marginTop: 'auto' }}>Versión {context.version}</Label> }
+          { !stuck && version && <Link size="small" color="white" style={{ marginTop: 'auto' }}>Versión {context.version}</Link> }
         </Flexbox>
       </Box>
     </div>

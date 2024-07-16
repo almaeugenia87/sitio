@@ -20,12 +20,14 @@ import Box  from '../../containers/Box';
 import Text from '../../containers/Text';
 
 // Componentes
-import Button from '../../components/atoms/Button';
+
 import Image from '../../components/atoms/Image';
-import Label from '../../components/molecules/Link';
+
 import Title from '../../components/atoms/Title';
 
+import Button from '../../components/molecules/Button';
 import Heading from '../../components/molecules/Heading';
+import Link from '../../components/molecules/Link';
 import Ribbon from '../../components/molecules/Ribbon';
 
 import Hero from '../../components/organisms/Hero';
@@ -108,7 +110,7 @@ const Inicio = props => {
 
         { data && data.map((pastel, i) => (
             <article className={style.article} key={i} onClick={() => navigate(`/pagina?id=${pastel.id}`, { replace: true }) } style={{ cursor:'pointer' }}>
-              { pastel.id === 1 && <Ribbon color="accent"><Label size="medium" color="white" accent="bold">NUEVO</Label></Ribbon> }
+              { pastel.id === 1 && <Ribbon color="accent"><Link size="medium" color="white" accent="bold">NUEVO</Link></Ribbon> }
               <Heading color="secondary" space="small" hue="light"><Title size="small">{pastel.nombre}</Title></Heading>
               <div className={style.paragraph}>
                 { pastel.imagen && <Image className={style.image} src={`http://localhost/api/files/${pastel.imagen}`}/> }

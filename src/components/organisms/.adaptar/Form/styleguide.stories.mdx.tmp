@@ -10,7 +10,7 @@ import { withDesign } from 'storybook-addon-designs';
 
 import Checkbox from '../../atoms/Checkbox';
 import Input from '../../atoms/Input';
-import Label from '../../atoms/Label';
+import Link from '../../molecules/Link';
 import Radio from '../../atoms/Radio';
 import Select from '../../atoms/Select';
 import Textarea from '../../atoms/Textarea';
@@ -70,11 +70,11 @@ iste modi sit deserunt? Officiis, quaerat!
     {(args) =>
       <Form {...args}>
         <Form.Field>
-          <Label accent="bold">Texto</Label>
+          <Link accent="bold">Texto</Link>
           <Input defaultValue={values.text} onChange={handleChange} placeholder="Ingresar texto..." style={{width:'100%'}}/>
         </Form.Field>
         <Form.Field>
-          <Label accent="bold">Seleccionar una opción</Label>
+          <Link accent="bold">Seleccionar una opción</Link>
           <Flexbox gap="medium">
             <Radio name="radio" defaultValue='1' defaultChecked={true} onChange={handleChange}>Uno</Radio>
             <Radio name="radio" defaultValue='2' onChange={handleChange}>Dos</Radio>
@@ -82,7 +82,7 @@ iste modi sit deserunt? Officiis, quaerat!
           </Flexbox>
         </Form.Field>
         <Form.Field>
-          <Label accent="bold">Selección</Label>
+          <Link accent="bold">Selección</Link>
           <Select defaultValue={values.select} onChange={handleChange} placeholder="Seleccionar..." style={{width:'100%'}}>
             <Select.Option value="1">Uno</Select.Option>
             <Select.Option value="2">Dos</Select.Option>
@@ -90,7 +90,7 @@ iste modi sit deserunt? Officiis, quaerat!
           </Select>
         </Form.Field>
         <Form.Field>
-          <Label accent="bold">Área de texto</Label>
+          <Link accent="bold">Área de texto</Link>
           <Textarea defaultValue={values.textarea} onChange={handleChange} placeholder="Ingrersar párrafo..." />
         </Form.Field>
       </Form>

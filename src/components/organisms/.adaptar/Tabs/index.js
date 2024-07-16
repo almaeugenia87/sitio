@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
 import style from './style.module.css';
 
 // Componentes
-import Label from '../../atoms/Label';
+import Link from '../../molecules/Link';
 
 // Contexto del componente
 const TabsContext = createContext();
@@ -50,7 +50,7 @@ const Item = ({ path, children, ...other }) => {
       className={`${style.item} ${value === path && style.selected}`}
       {...other}
     >
-      <Label bold={value === path} color="black">{children}</Label>
+      <Link bold={value === path} color="black">{children}</Link>
     </button>
 
   );

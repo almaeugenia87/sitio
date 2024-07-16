@@ -8,7 +8,7 @@
 import Image from '../Image';
 
 export default {
-  title: 'Átomos/a',
+  title: 'Átomos/HTML <a>',
   argTypes: {
     className: {
       name: 'className',

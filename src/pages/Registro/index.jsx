@@ -2,6 +2,8 @@
 // Registro de pilotos
 // José Esteva <josesteva@soft4pilot.net>
 
+// NOTA: Sustituir la molécula <Link> por una etiqueta HTML <label>.
+
 // Dependencias
 import React, { useContext, useRef } from 'react';
 import { isEmpty } from 'lodash';
@@ -18,12 +20,14 @@ import Flexbox  from '../../containers/Flexbox';
 import Text from '../../containers/Text';
 
 // Componentes
-import Button from '../../components/atoms/Button';
+
 import  Checkbox from '../../components/atoms/Checkbox';
 import  Input from '../../components/atoms/Input';
-import  Label from '../../components/atoms/Label';
+import  Link from '../../components/molecules/Link';
 import  Title from '../../components/atoms/Title';
 import { Select, Option } from '../../components/atoms/Select';
+
+import Button from '../../components/molecules/Button';
 import  Heading from '../../components/molecules/Heading';
 import { Form, Field } from '../../components/organisms/Form';
 
@@ -95,19 +99,19 @@ const Registro = props => {
           { !isEmpty(form.values) && 
             <Form style={{maxWidth:'960px'}}>
               <Field>
-                <Label bold>Nombre</Label>
+                <Link bold>Nombre</Link>
                 <Input required type="text" name="nombre" value={form.values.nombre} onChange={form.changeValue} color="primary" style={{width:'100%'}}/>
               </Field>
               <Field>
-                <Label bold>Correo electrónico</Label>
+                <Link bold>Correo electrónico</Link>
                 <Input required type="email" name="correo" value={form.values.correo} onChange={form.changeValue} color="primary" style={{width:'100%'}}/>
               </Field>
               <Field>
-                <Label bold>Pseudónimo</Label>
+                <Link bold>Pseudónimo</Link>
                 <Input type="text" name="pseudonimo" value={form.values.pseudonimo} onChange={form.changeValue} color="primary" style={{width:'100%'}}/>
               </Field>
               <Field>
-                <Label bold>Actividad principal</Label>
+                <Link bold>Actividad principal</Link>
                 <Select name="tipo" value={form.values.tipo} onChange={form.changeValue} color="primary" style={{width:'100%'}}>
                   <Option value="otro"></Option>
                   <Option value="alumno">Alumno de piloto</Option>
@@ -116,7 +120,7 @@ const Registro = props => {
                 </Select>
               </Field>
               <Field>
-                <Label bold style={{marginBottom:'4px'}}>¿Te gustaría participar?</Label>
+                <Link bold style={{marginBottom:'4px'}}>¿Te gustaría participar?</Link>
                 <Flexbox direction="column" gap="small" align="top">
                   <Checkbox name="arbitraje" checked={form.values.arbitraje} color="primary" onChange={form.changeValue}><Text size="medium" style={{marginLeft:'8px'}}>Tengo experiencia en la aviación, puedo ayudar a decidir qué información incluir.</Text></Checkbox>
                   <Checkbox name="elaboracion" checked={form.values.elaboracion} color="primary" onChange={form.changeValue}><Text size="medium" style={{marginLeft:'8px'}}>Soy artista, puedo ayudar a elaborar textos, ilustraciones y diagramas.</Text></Checkbox>

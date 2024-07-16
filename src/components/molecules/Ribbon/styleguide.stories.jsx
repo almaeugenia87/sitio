@@ -5,7 +5,7 @@
   José Esteva (josesteva@soft4pilot.net)
 */
 
-import Label from '../../atoms/Label';
+import Link from '../../molecules/Link';
 
 import Ribbon from './index';
 
@@ -35,6 +35,6 @@ export const Componente = {
   },
   render: (args) =>
     <div style={{position:'relative',left:'0',top:'0',height:'50vh',width:'100%',background:'lightgrey',overflow:'hidden'}}>
-      <Ribbon {...args}><Label size="medium" color="white" accent="bold">PROXIMAMENTE</Label></Ribbon>
+      <Ribbon {...args}><Link size="medium" color="white" accent="bold">PROXIMAMENTE</Link></Ribbon>
     </div>
 };

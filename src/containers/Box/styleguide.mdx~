@@ -5,10 +5,12 @@
   José Esteva (josesteva@soft4pilot.net)
 */
 
+/* NOTA: Sustituir la molécula <Link> por una etiqueta HTML <label>. */
+
 import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs';
 import { withDesign } from 'storybook-addon-designs';
 
-import Label from '../../components/atoms/Label';
+import Link from '../../components/atoms/Link';
 
 import Box from './index';
 
@@ -60,7 +62,7 @@ iste modi sit deserunt? Officiis, quaerat!
   >
     {(args) =>
       <Box {...args} style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
-        <Label size="medium" color={args.hue === 'light' ? 'black' : 'white'}>CONTENIDO</Label>
+        <Link size="medium" color={args.hue === 'light' ? 'black' : 'white'}>CONTENIDO</Link>
       </Box>
       }
   </Story>

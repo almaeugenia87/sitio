@@ -5,13 +5,13 @@
   José Esteva (josesteva@soft4pilot.net)
 */
 
-import Label from './index';
+import Link from './index';
 
 import icon from '../../../assets/icons/command.svg?react';
 
 export default {
-  component: Label,
-  title: 'Átomos/Label',
+  component: Link,
+  title: 'Átomos/Link',
   argTypes: {
     icon: {
       name: 'icon',
@@ -49,5 +49,5 @@ export const Componente = {
     color: 'black',
     bold: true
   },
-  render: (args) => <Label {...args}>Etiqueta</Label>
+  render: (args) => <Link {...args}>Etiqueta</Link>
 };

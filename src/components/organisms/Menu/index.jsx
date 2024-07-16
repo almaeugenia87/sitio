@@ -14,7 +14,7 @@
 import React, { createContext, useContext } from 'react';
 import PropTypes from 'prop-types';
 
-import Label from '../../molecules/Link';
+import Link from '../../molecules/Link';
 
 import style from './style.module.css';
 
@@ -46,7 +46,7 @@ const Item = props => {
 
   return (
     <li className={`${style.item} ${style[asideClass]}`} {...other}>
-      <Label icon={icon} size={size} color={color}>{children}</Label>
+      <Link icon={icon} size={size} color={color}>{children}</Link>
     </li>
   )
 }

@@ -20,9 +20,9 @@ import Box  from '../../containers/Box';
 import Text from '../../containers/Text';
 
 // Componentes
-import  Heading from '../../components/atoms/Button';
 import  Image from '../../components/atoms/Image';
 import  Title from '../../components/atoms/Title';
+import  Heading from '../../components/molecules/Heading';
 import { Actions, Command } from '../../components/organisms/Actions';
 
 // Estilos

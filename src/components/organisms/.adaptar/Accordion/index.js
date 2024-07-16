@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 
 // Componentes
 import Icon from '../../atoms/Icon';
-import Label from '../../atoms/Label';
+import Link from '../../molecules/Link';
 
 // Estilos locales
 import style from './style.module.css';
@@ -66,7 +66,7 @@ const Item = ({ path, title, children, other }) => {
       <summary
         onClick={(e) => { e.preventDefault(); changeSelected(path); }}
         className={`${style.summary} ${path !== selected ? style['summary-active'] : ''}`}>
-        <Label color={path === selected ? "black" : ""} bold={path === selected ? true : false}>{title}</Label>
+        <Link color={path === selected ? "black" : ""} bold={path === selected ? true : false}>{title}</Link>
         <Icon size="small" type="angle-down" color="primary" style={{
           transform: path === selected ? "scaleY(-1)" : "scaleY(1)",
           transition: "transform 0.3s ease"

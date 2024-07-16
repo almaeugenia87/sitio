@@ -5,9 +5,11 @@
   José Esteva (josesteva@soft4pilot.net)
 */
 
+/* NOTA: Sustituir la molécula <Link> por una etiqueta HTML <label>. */
+
 import Box from './index';
 
-import Label from '../../components/atoms/Label';
+import Link from '../../components/molecules/Link';
 
 export default {
   component: Box,
@@ -43,6 +45,6 @@ export default {
 
 export const Componente = {
   render: (args) => <Box {...args} style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
-      <Label size="medium" color={args.hue === 'light' ? 'black' : 'white'}>CONTENIDO</Label>
+      <Link size="medium" color={args.hue === 'light' ? 'black' : 'white'}>CONTENIDO</Link>
     </Box>
 };

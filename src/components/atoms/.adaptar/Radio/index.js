@@ -3,6 +3,7 @@
 // Radio (Selección de opción)
 
 // NOTA: Este componente debe recibir desde fuenra ya sea: Una propiedad 'defaultValue' o una propiedad 'value' y un método 'onChange'.
+// NOTA: Sistituir la molécula <Link> por simplement texto.
 
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -12,7 +13,7 @@ import '../../../styles/tokens.css';
 import style from './style.module.css';
 
 // Componentes
-import Label from '../Label';
+import Link from '../../molecules/Link';
 
 // Definición del componente
 const Radio = props => {
@@ -28,7 +29,7 @@ const Radio = props => {
           <input type="radio" disabled={disabled} {...other}/>
     	    <span></span>
     	  </div>
-    	  <Label size={size} color="black">{children}</Label>
+    	  <Link size={size} color="black">{children}</Link>
     	</label>
     </div>
   )
