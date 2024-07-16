@@ -23,6 +23,16 @@
 
 }
 
+.article img {
+
+  object-fit: none;
+  
+  width: 90%;
+  height: 45%; 
+  
+
+}
+
 .paragraph {
   display: flex;
   flex-direction: column;

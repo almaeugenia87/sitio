@@ -8,7 +8,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // Componentes
-import Label from '../../atoms/Label';
+import Label from '../../molecules/Link';
 
 // Estilo
 import style from './style.module.css';

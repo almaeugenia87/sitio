@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 
 import style from './style.module.css';
 
-import Label from '../../atoms/Label';
+import Link from '../Link';
 
 // Definición del componente
 const Button = props => {
@@ -20,7 +20,7 @@ const Button = props => {
 
   return (
     <button className={`${style.button} ${style[size]} ${style[color]} ${style[padding]}`} {...other}>
-      <Label icon={icon} color="white" size={size} bold>{children}</Label>
+      <Link icon={icon} color="white" size={size} bold>{children}</Link>
     </button>
   )
 

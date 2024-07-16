@@ -1,6 +1,6 @@
 // SD
 // Componentes
-// Label (Etiqueta)
+// Link (Enlace)
 // José Esteva <josesteva@soft4pilot.net>
 
 import React from 'react';
@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 import style from './style.module.css';
 
 // Componente
-const Label = props => {
+const Link = props => {
 
   const {icon, size = 'medium', color = 'black', bold = false, children, ...other} = props;
 
@@ -19,18 +19,18 @@ const Label = props => {
   const Icon = icon;
 
   return (
-    <span className={`${style.label} ${style[color]} ${style[size]} ${style[boldClass]}`} {...other}>
+    <span className={`${style.link} ${style[color]} ${style[size]} ${style[boldClass]}`} {...other}>
       {icon && <Icon />} {children}
     </span>
   )
 };
 
 // Parámetros
-Label.propTypes = {
+Link.propTypes = {
   icon: PropTypes.func,
   size: PropTypes.string,
   color: PropTypes.string,
   bold: PropTypes.bool
 }
 
-export default Label;
+export default Link;

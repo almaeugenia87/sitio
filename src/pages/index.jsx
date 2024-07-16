@@ -9,7 +9,7 @@ import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import { Context } from '../index';
 
 // Componentes
-import Label from '../components/atoms/Label';
+import Label from '../components/molecules/Link';
 import Link from '../components/atoms/Link';
 import { Item } from '../components/organisms/Menu';
 import Footer from '../components/organisms/Footer';

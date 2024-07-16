@@ -22,7 +22,7 @@ import Text from '../../containers/Text';
 // Componentes
 import Button from '../../components/atoms/Button';
 import Image from '../../components/atoms/Image';
-import Label from '../../components/atoms/Label';
+import Label from '../../components/molecules/Link';
 import Title from '../../components/atoms/Title';
 
 import Heading from '../../components/molecules/Heading';
@@ -91,7 +91,7 @@ const Inicio = props => {
       .then(data => setData(data))    //imprimir los datos en la consola
       .catch(err => console.log('LPDM: No se pudo acceder a los datos.', err)); // Capturar errores
 
-  }, [])
+  }, []);
 
   // Interfaz gráfica
   return (
@@ -111,7 +111,7 @@ const Inicio = props => {
               { pastel.id === 1 && <Ribbon color="accent"><Label size="medium" color="white" accent="bold">NUEVO</Label></Ribbon> }
               <Heading color="secondary" space="small" hue="light"><Title size="small">{pastel.nombre}</Title></Heading>
               <div className={style.paragraph}>
-                {/* pastel.imagen && <Image className={style.image} src={`${import.meta.env.LPDM_API_URL}${pastel.imagen.data.url}`}/> */}
+                { pastel.imagen && <Image className={style.image} src={`http://localhost/api/files/${pastel.imagen}`}/> }
                 <Text align="center">{pastel.descripcion}</Text>
               </div>
             </article>
@@ -120,12 +120,12 @@ const Inicio = props => {
 
       </div>
 
-      <Actions open={open} onClick={() => setOpen(!open)} style={{ position:'fixed', right:'2em', bottom:'2em', zIndex:'50' }}>
+      {/* <Actions open={open} onClick={() => setOpen(!open)} style={{ position:'fixed', right:'2em', bottom:'2em', zIndex:'50' }}>
         <Command icon={Icon} onClick={(e) => applyCommand(e, 1)}/>
         <Command icon={Icon} onClick={(e) => applyCommand(e, 2)}/>
         <Command icon={Icon} onClick={(e) => applyCommand(e, 3)}/>
         <Command icon={Icon} onClick={(e) => applyCommand(e, 4)}/>
-      </Actions>
+      </Actions> */}
 
     </>
 

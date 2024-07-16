@@ -18,7 +18,7 @@ import Box  from '../../../containers/Box';
 import Flexbox from '../../../containers/Flexbox';
 
 // Componentes
-import Label from '../../atoms/Label';
+import Label from '../../molecules/Link';
 import Title from '../../atoms/Title';  
 
 // Estilos locales

@@ -14,7 +14,7 @@
 import React, { createContext, useContext } from 'react';
 import PropTypes from 'prop-types';
 
-import Label from '../../atoms/Label';
+import Label from '../../molecules/Link';
 
 import style from './style.module.css';
 
