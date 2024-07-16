@@ -2,7 +2,7 @@
 // Página principal
 // José Esteva <josesteva@soft4pilot.net>
 
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { gql, useQuery } from '@apollo/client';
 
@@ -56,13 +56,6 @@ const Query = gql`query {
   }
 }`;
 
-// Solicitud GET (Request).
-fetch('http://localhost/api')
-  .then(response => response.text())  // convertir a texto
-  // .then(response => response.json())  // convertir a json
-  .then(data => console.log(data))    //imprimir los datos en la consola
-  .catch(err => console.log('Error al acceder a los datos', err)); // Capturar errores
-
 // Definición del componente
 const Inicio = props => {
 
@@ -73,11 +66,14 @@ const Inicio = props => {
   // const { context } = useContext(Context);
 
   // Obtener los datos de la página
-  const { data }  = useQuery(Query);
+  // const { data }  = useQuery(Query);
 
   // NOTA: Poner el siguiente código dentro de un mecanismo (hook)
   // Desde aquí -->
+
+  const [data, setData] = useState([]);
   const [open, setOpen] = useState(false);    // Estado del botón de acciones
+
 
   const applyCommand = (e, i) => {
       setOpen(false);
@@ -86,6 +82,16 @@ const Inicio = props => {
   // <-- Hasta aquí
 
   const CodeAction = <Button color="accent">Código</Button>; // [lock-ignore/]
+
+  useEffect(() => {
+
+    // Solicitud GET (Request).
+    fetch('http://localhost/api')
+      .then(response => response.json())  // convertir a json
+      .then(data => setData(data))    //imprimir los datos en la consola
+      .catch(err => console.log('LPDM: No se pudo acceder a los datos.', err)); // Capturar errores
+
+  }, [])
 
   // Interfaz gráfica
   return (
@@ -100,15 +106,15 @@ const Inicio = props => {
 
       <div className={style.grid}>
 
-        { data && data.servicios && data.servicios.data.map((servicio, i) => (
-            <section className={style.section} key={i} onClick={() => navigate(`/pagina?id=${servicio.id}`, { replace: true }) } style={{ cursor:'pointer' }}>
-              { servicio.id === 2 && <Ribbon color="accent"><Label size="medium" color="white" accent="bold">NUEVO</Label></Ribbon> }
-              <Heading color="secondary" space="small" hue="light"><Title size="small">{servicio.attributes.nombre}</Title></Heading>
+        { data && data.map((pastel, i) => (
+            <article className={style.article} key={i} onClick={() => navigate(`/pagina?id=${pastel.id}`, { replace: true }) } style={{ cursor:'pointer' }}>
+              { pastel.id === 1 && <Ribbon color="accent"><Label size="medium" color="white" accent="bold">NUEVO</Label></Ribbon> }
+              <Heading color="secondary" space="small" hue="light"><Title size="small">{pastel.nombre}</Title></Heading>
               <div className={style.paragraph}>
-                { servicio.attributes.imagen && <Image className={style.image} src={`${import.meta.env.LPDM_API_URL}${servicio.attributes.imagen.data.attributes.url}`}/> }
-                <Text align="center">{servicio.attributes.descripcion}</Text>
+                {/* pastel.imagen && <Image className={style.image} src={`${import.meta.env.LPDM_API_URL}${pastel.imagen.data.url}`}/> */}
+                <Text align="center">{pastel.descripcion}</Text>
               </div>
-            </section>
+            </article>
           )
         )}
 
