@@ -11,19 +11,10 @@
 /* Tokens */
 :root {
 
-  /**
-  * @tokens Fuentes
-  * @presenter FontFamily
-  */
-
   --font-family: 'Alegreya Sans', sans-serif;
 
   /* TAMAÑO */
 
-  /**
-  * @tokens Tamaños de letra
-  * @presenter FontSize
-  */
   --font-size-huge: 32px;
   --font-size-large: 24px;
   --font-size-medium: 16px;
@@ -32,20 +23,11 @@
 
   /* ALTO DE LÍNEA */
 
-  /**
-  * @tokens Altos de línea
-  * @presenter LineHeight
-  */
   --line-height-huge: 48px;
   --line-height-large: 32px;
   --line-height-medium: 24px;
   --line-height-small: 16px;
   --line-height-tiny: 12px;
-
-  /**
-  * @tokens Tamaños de íconos
-  * @presenter LineHeight
-  */
 
   /* Tamaño de los iconos */
   --icon-size-huge: calc(var(--font-size-huge)*2);
@@ -56,19 +38,9 @@
 
   /* GROSOR */
 
-  /**
-  * @tokens Grosores de letras
-  * @presenter FontWeight
-  */
-
   --font-weight-bold: 700;
   --font-weight-medium: 400;
   --font-weight-light: 300;
-
-  /**
-  * @tokens Alias
-  * @presenter FontWeight
-  */
 
   /* Tipogtafías completas */
   --font-huge: var(--font-weight-medium) var(--font-size-huge)/var(--line-height-huge) 'Croissant One', serif;

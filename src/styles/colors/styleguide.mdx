@@ -1,12 +1,11 @@
-/*
+{/*
   SD
   Estilos
   Variables de diseño - Guía
   José Esteva (josesteva@soft4pilot.net)
-*/
+*/}
 
-import { Meta, Story, Canvas } from '@storybook/addon-docs';
-import { DesignTokenDocBlock } from 'storybook-design-token/dist/doc-blocks';
+import { Meta, Story, Canvas, ColorPalette, ColorItem } from '@storybook/blocks';
 
 <Meta title="Estilo/Colores" />
 
@@ -18,4 +17,30 @@ odit facere eum vel reiciendis eius repellat, totam aperiam. Molestiae error
 voluptatibus et neque vel libero, harum nam quibusdam mollitia, sapiente rerum
 iste modi sit deserunt? Officiis, quaerat!
 
-<DesignTokenDocBlock categoryName="Colores" viewType="card" />
+<ColorPalette>
+  <ColorItem
+    title="theme.color.greyscale"
+    subtitle="Some of the greys"
+    colors={{ White: '#FFFFFF', Alabaster: '#F8F8F8', Concrete: '#F3F3F3' }}
+  />
+  <ColorItem 
+    title="theme.color.primary" 
+    subtitle="Coral" 
+    colors={{ WildWatermelon: '#FF4785' }} 
+  />
+  <ColorItem 
+    title="theme.color.secondary" 
+    subtitle="Ocean" 
+    colors={{ DodgerBlue: '#1EA7FD' }} 
+  />
+  <ColorItem
+    title="theme.color.positive"
+    subtitle="Green"
+    colors={{
+      Apple: 'rgba(102,191,60,1)',
+      Apple80: 'rgba(102,191,60,.8)',
+      Apple60: 'rgba(102,191,60,.6)',
+      Apple30: 'rgba(102,191,60,.3)',
+    }}
+  />
+</ColorPalette>
