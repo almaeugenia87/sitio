@@ -1,0 +1,45 @@
+/*
+  SD
+  Estilos - Colores
+  Variables de diseño
+  José Esteva <josesteva@soft4pilot.net>
+*/
+
+:root {
+
+  /**
+  * @tokens Colores
+  * @presenter Color
+  */
+
+  /* Blanco y negro */
+  --color-black: #161518;
+  --color-white: #F6F2FA;
+
+  /* Color secundario */
+  --color-secondary: #0AB0F6;
+  --color-secondary-dark: #063E56;
+  --color-secondary-light: #D3E9F2;
+
+  /* Color primario */
+  --color-primary: #8204FF;
+  --color-primary-dark: #2D005B;
+  --color-primary-light: #E9D3FF;
+
+  /* Color de acento */
+  --color-accent: #FF0099;
+
+  /* Alias */
+
+  /*
+  --color-error-foreground:
+  --color-error-background:
+  --color-warning-foreground:
+  --color-warning-background:
+  --color-success-foreground:
+  --color-success-background:
+  --color-info-foreground:
+  --color-info-background:
+  */
+  
+}

@@ -6,10 +6,12 @@
 
 /* [lock:global-styles] */
 
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Croissant+One&display=swap');
+/* Estilo */
+@import 'styles/colors/style.css';
+@import 'styles/typography/style.css';
 
-@import 'styles/tokens/style.css';
-@import 'styles/default/style.css';
+/* Átomos */
+@import 'components/atoms/style.css';
 
 /* [/lock:global-styles] */
 

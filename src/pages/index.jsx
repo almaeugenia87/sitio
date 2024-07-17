@@ -10,7 +10,6 @@ import { Context } from '../index';
 
 // Componentes
 import Label from '../components/atoms/Label';
-import Link from '../components/atoms/Link';
 import { Item } from '../components/organisms/Menu';
 import Footer from '../components/organisms/Footer';
 import Header from '../components/organisms/Header';
@@ -88,7 +87,7 @@ const Template = () => {
           })}
         </Routes>
         <Footer color="secondary" hue="dark" style={{marginTop:'auto'}}>
-          <Link href={`mailto:${context.email}`} color="primary" variant="light"><Label size="medium" color="white">{context.email}</Label></Link>
+          <a className="primary light" href={`mailto:${context.email}`}><Label size="medium" color="white">{context.email}</Label></a>
         </Footer>
       </main>
     </>

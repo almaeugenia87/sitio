@@ -1,0 +1,80 @@
+/*
+  SD
+  Átomos
+  HTML a
+  Estilos en cascada
+  José Esteva <josesteva@soft4pilot.net>
+  
+*/
+
+/* Predeterminado */
+
+a {
+  text-decoration: none;
+}
+
+a img {
+  outline-style: none;
+  outline-width: 3px;
+}
+
+/* Estados y eventos */
+
+a:hover {
+  cursor: pointer;
+}
+
+a span:hover {
+  text-decoration: underline;
+}
+
+a img:hover {
+  outline-style: solid;
+}
+
+/* Colores */
+
+a.black *:hover {
+  color: var(--color-black);
+  outline-color: var(--color-black);
+}
+
+a.primary *:hover {
+  color: var(--color-primary);
+  outline-color: var(--color-primary);
+}
+
+a.primary.dark *:hover {
+  color: var(--color-primary-dark);
+  outline-color: var(--color-primary-dark);
+}
+
+a.primary.light *:hover {
+  color: var(--color-primary-light);
+  outline-color: var(--color-primary-light);
+}
+
+a.secondary *:hover {
+  color: var(--color-secondary);
+  outline-color: var(--color-secondary);
+}
+
+a.secondary.dark *:hover {
+  color: var(--color-secondary-dark);
+  outline-color: var(--color-secondary-dark);
+}
+
+a.secondary.light *:hover {
+  color: var(--color-secondary-light);
+  outline-color: var(--color-secondary-light);
+}
+
+a.accent *:hover {
+  color: var(--color-accent);
+  outline-color: var(--color-accent);
+}
+
+a.white *:hover {
+  color: var(--color-white);
+  outline-color: var(--color-white);
+}
