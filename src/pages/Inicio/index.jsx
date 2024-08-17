@@ -86,7 +86,7 @@ const Inicio = props => {
   useEffect(() => {
 
     // Solicitud GET (Request).
-    fetch('http://localhost/api')
+    fetch('http://localhost:8080/api')
       .then(response => response.json())  // convertir a json
       .then(data => setData(data))    //imprimir los datos en la consola
       .catch(err => console.log('LPDM: No se pudo acceder a los datos.', err)); // Capturar errores
