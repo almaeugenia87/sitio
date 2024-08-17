@@ -1,0 +1,3 @@
+[submodule "public/api"]
+	path = public/api
+	url = github-lpdm:josesteva/lpdmapi.git
